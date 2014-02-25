@@ -72,3 +72,10 @@ echo "" to install just:"
 echo "mkdir "$BASE_DIR"/"$APP_NAME
 echo "than"
 echo "mv App "$BASE_DIR"/"$APP_NAME"/App"
+echo "Add a new system username: "$APP_NAME
+echo "fine tune unbound.conf..take inspiration from unbound.conf.template and put it into "$PREFIX"/etc/unbound/"
+echo "Clean /etc/resolv.conf and put only: 127.0.0.1"
+echo "bang Unbound from root with:"
+echo "export LD_LIBRARY_PATH="$PREFIX"/lib:\$LD_LIBRARY_PATH"
+echo "export PATH="$PREFIX"/sbin:\$PATH"
+echo $PREFIX"/sbin/unbound"
