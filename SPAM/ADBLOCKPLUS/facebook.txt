@@ -1,0 +1,24 @@
+[Adblock Plus 1.0.1]
+! X Files NoFacebookAds 20120321 (v.0.7)
+! Elimina la pubblicita' dal noto Social Network
+! Compatibile anche con la nuova TimeLine
+! Info: http://mozilla.gfsolone.com/#nofacebookads
+! Supporto: http://mozilla.gfsolone.com/#nfa_supporto
+!
+facebook.com##DIV[class="ad_capsule"]
+facebook.com##DIV[class="social_ad"]
+facebook.com##DIV[class="sponsor"]
+facebook.com##DIV[id="sponsor"]
+facebook.com##DIV[id="sidebar_ads"]
+facebook.com##DIV[class="ads"]
+facebook.com##DIV[id="ads"]
+facebook.com##DIV[id="announce"]
+facebook.com##DIV[class="profile_sidebar_ads"]
+facebook.com##DIV[class="adcolumn"]
+facebook.com##DIV[class="adcolumn_header"]
+facebook.com##DIV[class="bumper"]
+facebook.com##DIV[id="adcolumn_advertise"]
+facebook.com##DIV[id="pagelet_adbox"]
+facebook.com##[id^="600"]
+facebook.com##.fbTimelineSideAds.fixed_elem
+facebook.com###pagelet_side_ads.fbTimelineSideAds
