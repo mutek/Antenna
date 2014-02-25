@@ -5,4 +5,4 @@ Antenna related stuff
 
 Bookmarks
 
-(http://www.digdice.com/)
+http://www.digdice.com/
