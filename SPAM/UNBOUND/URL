@@ -1,0 +1,10 @@
+# Latest
+
+wget http://unbound.net/downloads/unbound-latest.tar.gz
+
+# 1.4.21
+
+wget http://unbound.net/downloads/unbound-1.4.21.tar.gz
+
+# SHA1 checksum: 3ef4ea626e5284368d48ab618fe2207d43f2cee1
+# SHA256 checksum: 502f817a72721f78243923eb1d6187029639f7a8bdcc33a6ce0819bbb2a80970

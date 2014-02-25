@@ -1,0 +1,74 @@
+#!/usr/bin/env sh
+# Builder per Unbound DNS recursive caching validating server
+#
+# Luca Cappelletti (2014)
+# Public Domain
+#
+# ricetta per Unbound
+# questa ricetta viene eseguita direttamente nella directory corrente
+## indagare su hash e command -v in alternativa a which
+
+DEB_PACKAGE="unbound"
+DOWNLOAD_URL="http://unbound.net/downloads/unbound-1.4.21.tar.gz"
+SOURCE_ARCHIVE="unbound-1.4.21.tar.gz"
+BUILD_DIR="unbound-1.4.21"
+RELEASE="1.4.21"
+APP_NAME="Unbound"
+APP_DISTRO="Debian7"
+APP_KERNEL="Linux"
+APP_PLATFORM="ia32"
+
+# ANDRMD
+#PREFIX=/home/$APP_NAME/.App/io$APP_NAME$RELEASE-$APP_DISTRO/$APP_KERNEL-$APP_PLATFORM
+
+# POSIX
+BASE_DIR=/opt
+PREFIX=$BASE_DIR/$APP_NAME/.App/io$APP_NAME$RELEASE-$APP_DISTRO/$APP_KERNEL-$APP_PLATFORM
+
+for i in "apt-get" "wget" "echo" "sha1sum" "sha256sum" "tar" "make"
+do
+
+   [ -z $(which $i) ] && echo "il tool: "$i" non è raggiungibile...esco..." && exit 1
+
+done
+echo "i tools di base esistono...proseguo"
+
+# root o sudo ma vai in manuale
+apt-get -y build-dep $DEB_PACKAGE || exit 1
+
+
+wget $DOWNLOAD_URL
+wait
+echo "hash dichiarati: "
+echo "SHA1:3ef4ea626e5284368d48ab618fe2207d43f2cee1"
+echo "SHA256:502f817a72721f78243923eb1d6187029639f7a8bdcc33a6ce0819bbb2a80970"
+echo ""
+echo "Calcolo hash..."
+
+sha1sum $SOURCE_ARCHIVE
+wait
+sha256sum $SOURCE_ARCHIVE
+
+
+tar -xf $SOURCE_ARCHIVE || exit 1
+
+cd $BUILD_DIR
+
+export LC_ALL=C
+./configure --prefix=$PREFIX --with-username=$APP_NAME
+make
+make install
+
+cd ..
+rm --preserve-root -r $BUILD_DIR
+
+mv $BASE_DIR/$APP_NAME/.App App
+wait
+rm --preserve-root -r $BASE_DIR/$APP_NAME
+
+# ready...
+echo $APP_NAME" ready in App folder"
+echo "" to install just:"
+echo "mkdir "$BASE_DIR"/"$APP_NAME
+echo "than"
+echo "mv App "$BASE_DIR"/"$APP_NAME"/App"
