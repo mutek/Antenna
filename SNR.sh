@@ -88,3 +88,10 @@ echo "Rumore (N) = "$(echo "scale=1;$N/1" | bc -l)" dB"
 SNR=$(echo "scale=1;($Prx-($N))/1" | bc -l)
 
 echo "Rapporto Segnale/Rumore (SNR) = "$SNR" dB"
+
+# regulator:
+# ifconfig wlan0 down
+# iw reg set BO
+# iw reg get
+# iwconfig wlan0 txpower 30
+# ifconfig wlan0 up
