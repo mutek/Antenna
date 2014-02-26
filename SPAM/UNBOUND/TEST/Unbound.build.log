@@ -1,0 +1,612 @@
+i tools di base esistono...proseguo
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 20 not upgraded.
+hash dichiarati: 
+SHA1:3ef4ea626e5284368d48ab618fe2207d43f2cee1
+SHA256:502f817a72721f78243923eb1d6187029639f7a8bdcc33a6ce0819bbb2a80970
+
+Calcolo hash...
+3ef4ea626e5284368d48ab618fe2207d43f2cee1  unbound-1.4.21.tar.gz
+502f817a72721f78243923eb1d6187029639f7a8bdcc33a6ce0819bbb2a80970  unbound-1.4.21.tar.gz
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking target system type... i686-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for an ANSI C-conforming const... yes
+checking whether gcc supports -g... yes
+checking whether gcc supports -O2... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking gcc dependency flag... -MM
+checking whether gcc supports -Werror... yes
+checking whether gcc supports -Wall... yes
+checking whether gcc supports -std=c99... yes
+checking whether gcc supports -xc99... no
+checking for getopt.h... yes
+checking for time.h... yes
+checking whether we need -std=c99 -D__EXTENSIONS__ -D_BSD_SOURCE -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -D_ALL_SOURCE as a flag for gcc... no
+checking whether we need -std=c99 -D__EXTENSIONS__ -D_BSD_SOURCE -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600 -D_ALL_SOURCE as a flag for gcc... no
+checking whether we need -std=c99 as a flag for gcc... no
+checking whether we need -D_BSD_SOURCE as a flag for gcc... no
+checking whether we need -D_GNU_SOURCE as a flag for gcc... yes
+checking whether we need -D_GNU_SOURCE -D_FRSRESGID as a flag for gcc... no
+checking whether we need -D_POSIX_C_SOURCE=200112 as a flag for gcc... no
+checking whether we need -D__EXTENSIONS__ as a flag for gcc... no
+checking if gcc supports -flto... yes
+checking for inline... inline
+checking whether the C compiler (gcc) accepts the "format" attribute... yes
+checking whether the C compiler (gcc) accepts the "unused" attribute... yes
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+checking for yylex_destroy... yes
+checking for bison... bison -y
+checking for doxygen... doxygen
+checking for strip... strip
+checking for ar... /usr/bin/ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert i686-pc-linux-gnu file names to i686-pc-linux-gnu format... func_convert_file_noop
+checking how to convert i686-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... (cached) strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for stdarg.h... yes
+checking for stdbool.h... yes
+checking for netinet/in.h... yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for sys/uio.h... yes
+checking for sys/resource.h... yes
+checking for arpa/inet.h... yes
+checking for syslog.h... yes
+checking for netdb.h... yes
+checking for sys/wait.h... yes
+checking for pwd.h... yes
+checking for glob.h... yes
+checking for grp.h... yes
+checking for login_cap.h... no
+checking for winsock2.h... no
+checking for ws2tcpip.h... no
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for uid_t in sys/types.h... yes
+checking for pid_t... yes
+checking for off_t... yes
+checking for u_char... yes
+checking for rlim_t... yes
+checking for socklen_t... yes
+checking for in_addr_t... yes
+checking for in_port_t... yes
+checking if memcmp compares unsigned... yes
+checking for library containing inet_pton... none required
+checking for library containing socket... none required
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking return type of signal handlers... void
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking whether we need -D_LARGEFILE_SOURCE=1 as a flag for gcc... no
+checking if nonblocking sockets work... yes
+checking whether mkdir has one arg... no
+checking for strptime... yes
+checking whether strptime works... yes
+checking for GNU libc compatible malloc... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for pthread_spinlock_t... yes
+checking for pthread_rwlock_t... yes
+checking for SSL... found in /usr
+checking for HMAC_CTX_init in -lcrypto... yes
+checking for library containing dlopen... none required
+checking for openssl/ssl.h... yes
+checking for openssl/err.h... yes
+checking for openssl/rand.h... yes
+checking if libssl needs libdl... no
+checking for openssl/conf.h... yes
+checking for openssl/engine.h... yes
+checking for OPENSSL_config... yes
+checking for EVP_sha1... yes
+checking for EVP_sha256... yes
+checking for EVP_sha512... yes
+checking for FIPS_mode... yes
+checking whether SSL_COMP_get_compression_methods is declared... yes
+checking whether sk_SSL_COMP_pop_free is declared... yes
+checking for EVP_PKEY_set_type_str... yes
+checking for EC_KEY_new... yes
+checking if GOST works... yes
+checking for ECDSA_sign... yes
+checking for SHA384_Init... yes
+checking whether NID_X9_62_prime256v1 is declared... yes
+checking whether NID_secp384r1 is declared... yes
+checking if openssl supports SHA2 and ECDSA with EVP... yes
+checking for libexpat... found in /usr
+checking for expat.h... yes
+checking for getaddrinfo... yes
+checking for ioctlsocket... no
+checking for daemon... yes
+checking if daemon is deprecated... no
+checking for struct in_pktinfo.ipi_spec_dst... yes
+checking for library containing setusercontext... no
+checking for tzset... yes
+checking for sigprocmask... yes
+checking for fcntl... yes
+checking for getpwnam... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for setsid... yes
+checking for sbrk... yes
+checking for chroot... yes
+checking for kill... yes
+checking for sleep... yes
+checking for usleep... yes
+checking for random... yes
+checking for srandom... yes
+checking for recvmsg... yes
+checking for sendmsg... yes
+checking for writev... yes
+checking for socketpair... yes
+checking for glob... yes
+checking for initgroups... yes
+checking for strftime... yes
+checking for localtime_r... yes
+checking for setusercontext... no
+checking for _beginthreadex... no
+checking for setresuid... yes
+checking for setresgid... yes
+checking for inet_aton... yes
+checking for inet_pton... yes
+checking for inet_ntop... yes
+checking for snprintf... yes
+checking for strlcpy... no
+checking for memmove... yes
+checking for gmtime_r... yes
+checking for ctime_r... yes
+checking if make supports $< with implicit rule in scope... yes
+checking for ldns_rr_new in -lldns... yes
+checking for ldns_buffer_copy... yes
+checking for ldns_key_buf2rsa_raw... yes
+checking for ldns_get_random... yes
+checking for ldns_b32_ntop_extended_hex... yes
+checking for ldns_key_EVP_load_gost_id... yes
+checking for ldns_key_EVP_unload_gost... yes
+checking whether LDNS_ECDSAP384SHA384 is declared... yes
+checking for ldns/ldns.h... yes
+configure: Stripping extension flags...
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/example.conf
+config.status: creating doc/libunbound.3
+config.status: creating doc/unbound.8
+config.status: creating doc/unbound-anchor.8
+config.status: creating doc/unbound-checkconf.8
+config.status: creating doc/unbound.conf.5
+config.status: creating doc/unbound-control.8
+config.status: creating config.h
+config.status: executing libtool commands
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o dns.lo -c services/cache/dns.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/cache/dns.c  -fPIC -DPIC -o .libs/dns.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/cache/dns.c -o dns.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o infra.lo -c services/cache/infra.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/cache/infra.c  -fPIC -DPIC -o .libs/infra.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/cache/infra.c -o infra.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o rrset.lo -c services/cache/rrset.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/cache/rrset.c  -fPIC -DPIC -o .libs/rrset.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/cache/rrset.c -o rrset.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o dname.lo -c util/data/dname.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/dname.c  -fPIC -DPIC -o .libs/dname.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/dname.c -o dname.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o msgencode.lo -c util/data/msgencode.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/msgencode.c  -fPIC -DPIC -o .libs/msgencode.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/msgencode.c -o msgencode.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o msgparse.lo -c util/data/msgparse.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/msgparse.c  -fPIC -DPIC -o .libs/msgparse.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/msgparse.c -o msgparse.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o msgreply.lo -c util/data/msgreply.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/msgreply.c  -fPIC -DPIC -o .libs/msgreply.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/msgreply.c -o msgreply.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o packed_rrset.lo -c util/data/packed_rrset.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/packed_rrset.c  -fPIC -DPIC -o .libs/packed_rrset.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/data/packed_rrset.c -o packed_rrset.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iterator.lo -c iterator/iterator.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iterator.c  -fPIC -DPIC -o .libs/iterator.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iterator.c -o iterator.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_delegpt.lo -c iterator/iter_delegpt.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_delegpt.c  -fPIC -DPIC -o .libs/iter_delegpt.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_delegpt.c -o iter_delegpt.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_donotq.lo -c iterator/iter_donotq.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_donotq.c  -fPIC -DPIC -o .libs/iter_donotq.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_donotq.c -o iter_donotq.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_fwd.lo -c iterator/iter_fwd.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_fwd.c  -fPIC -DPIC -o .libs/iter_fwd.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_fwd.c -o iter_fwd.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_hints.lo -c iterator/iter_hints.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_hints.c  -fPIC -DPIC -o .libs/iter_hints.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_hints.c -o iter_hints.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_priv.lo -c iterator/iter_priv.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_priv.c  -fPIC -DPIC -o .libs/iter_priv.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_priv.c -o iter_priv.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_resptype.lo -c iterator/iter_resptype.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_resptype.c  -fPIC -DPIC -o .libs/iter_resptype.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_resptype.c -o iter_resptype.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_scrub.lo -c iterator/iter_scrub.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_scrub.c  -fPIC -DPIC -o .libs/iter_scrub.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_scrub.c -o iter_scrub.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o iter_utils.lo -c iterator/iter_utils.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_utils.c  -fPIC -DPIC -o .libs/iter_utils.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c iterator/iter_utils.c -o iter_utils.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o localzone.lo -c services/localzone.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/localzone.c  -fPIC -DPIC -o .libs/localzone.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/localzone.c -o localzone.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o mesh.lo -c services/mesh.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/mesh.c  -fPIC -DPIC -o .libs/mesh.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/mesh.c -o mesh.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o modstack.lo -c services/modstack.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/modstack.c  -fPIC -DPIC -o .libs/modstack.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/modstack.c -o modstack.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o outbound_list.lo -c services/outbound_list.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/outbound_list.c  -fPIC -DPIC -o .libs/outbound_list.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/outbound_list.c -o outbound_list.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o alloc.lo -c util/alloc.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/alloc.c  -fPIC -DPIC -o .libs/alloc.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/alloc.c -o alloc.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o config_file.lo -c util/config_file.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/config_file.c  -fPIC -DPIC -o .libs/config_file.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/config_file.c -o config_file.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o configlexer.lo -c util/configlexer.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/configlexer.c  -fPIC -DPIC -o .libs/configlexer.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/configlexer.c -o configlexer.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o configparser.lo -c util/configparser.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/configparser.c  -fPIC -DPIC -o .libs/configparser.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/configparser.c -o configparser.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o fptr_wlist.lo -c util/fptr_wlist.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/fptr_wlist.c  -fPIC -DPIC -o .libs/fptr_wlist.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/fptr_wlist.c -o fptr_wlist.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o locks.lo -c util/locks.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/locks.c  -fPIC -DPIC -o .libs/locks.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/locks.c -o locks.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o log.lo -c util/log.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/log.c  -fPIC -DPIC -o .libs/log.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/log.c -o log.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o mini_event.lo -c util/mini_event.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/mini_event.c  -fPIC -DPIC -o .libs/mini_event.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/mini_event.c -o mini_event.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o module.lo -c util/module.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/module.c  -fPIC -DPIC -o .libs/module.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/module.c -o module.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o net_help.lo -c util/net_help.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/net_help.c  -fPIC -DPIC -o .libs/net_help.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/net_help.c -o net_help.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o random.lo -c util/random.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/random.c  -fPIC -DPIC -o .libs/random.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/random.c -o random.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o rbtree.lo -c util/rbtree.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/rbtree.c  -fPIC -DPIC -o .libs/rbtree.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/rbtree.c -o rbtree.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o regional.lo -c util/regional.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/regional.c  -fPIC -DPIC -o .libs/regional.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/regional.c -o regional.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o rtt.lo -c util/rtt.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/rtt.c  -fPIC -DPIC -o .libs/rtt.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/rtt.c -o rtt.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o dnstree.lo -c util/storage/dnstree.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/dnstree.c  -fPIC -DPIC -o .libs/dnstree.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/dnstree.c -o dnstree.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o lookup3.lo -c util/storage/lookup3.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/lookup3.c  -fPIC -DPIC -o .libs/lookup3.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/lookup3.c -o lookup3.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o lruhash.lo -c util/storage/lruhash.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/lruhash.c  -fPIC -DPIC -o .libs/lruhash.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/lruhash.c -o lruhash.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o slabhash.lo -c util/storage/slabhash.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/slabhash.c  -fPIC -DPIC -o .libs/slabhash.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/storage/slabhash.c -o slabhash.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o timehist.lo -c util/timehist.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/timehist.c  -fPIC -DPIC -o .libs/timehist.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/timehist.c -o timehist.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o tube.lo -c util/tube.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/tube.c  -fPIC -DPIC -o .libs/tube.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/tube.c -o tube.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o winsock_event.lo -c util/winsock_event.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/winsock_event.c  -fPIC -DPIC -o .libs/winsock_event.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/winsock_event.c -o winsock_event.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o autotrust.lo -c validator/autotrust.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/autotrust.c  -fPIC -DPIC -o .libs/autotrust.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/autotrust.c -o autotrust.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_anchor.lo -c validator/val_anchor.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_anchor.c  -fPIC -DPIC -o .libs/val_anchor.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_anchor.c -o val_anchor.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o validator.lo -c validator/validator.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/validator.c  -fPIC -DPIC -o .libs/validator.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/validator.c -o validator.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_kcache.lo -c validator/val_kcache.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_kcache.c  -fPIC -DPIC -o .libs/val_kcache.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_kcache.c -o val_kcache.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_kentry.lo -c validator/val_kentry.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_kentry.c  -fPIC -DPIC -o .libs/val_kentry.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_kentry.c -o val_kentry.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_neg.lo -c validator/val_neg.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_neg.c  -fPIC -DPIC -o .libs/val_neg.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_neg.c -o val_neg.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_nsec3.lo -c validator/val_nsec3.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_nsec3.c  -fPIC -DPIC -o .libs/val_nsec3.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_nsec3.c -o val_nsec3.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_nsec.lo -c validator/val_nsec.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_nsec.c  -fPIC -DPIC -o .libs/val_nsec.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_nsec.c -o val_nsec.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_secalgo.lo -c validator/val_secalgo.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_secalgo.c  -fPIC -DPIC -o .libs/val_secalgo.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_secalgo.c -o val_secalgo.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_sigcrypt.lo -c validator/val_sigcrypt.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_sigcrypt.c  -fPIC -DPIC -o .libs/val_sigcrypt.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_sigcrypt.c -o val_sigcrypt.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o val_utils.lo -c validator/val_utils.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_utils.c  -fPIC -DPIC -o .libs/val_utils.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c validator/val_utils.c -o val_utils.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o netevent.lo -c util/netevent.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/netevent.c  -fPIC -DPIC -o .libs/netevent.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c util/netevent.c -o netevent.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o listen_dnsport.lo -c services/listen_dnsport.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/listen_dnsport.c  -fPIC -DPIC -o .libs/listen_dnsport.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/listen_dnsport.c -o listen_dnsport.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o outside_network.lo -c services/outside_network.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/outside_network.c  -fPIC -DPIC -o .libs/outside_network.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c services/outside_network.c -o outside_network.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o acl_list.lo -c daemon/acl_list.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/acl_list.c  -fPIC -DPIC -o .libs/acl_list.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/acl_list.c -o acl_list.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o cachedump.lo -c daemon/cachedump.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/cachedump.c  -fPIC -DPIC -o .libs/cachedump.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/cachedump.c -o cachedump.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o daemon.lo -c daemon/daemon.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/daemon.c  -fPIC -DPIC -o .libs/daemon.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/daemon.c -o daemon.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o remote.lo -c daemon/remote.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/remote.c  -fPIC -DPIC -o .libs/remote.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/remote.c -o remote.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o stats.lo -c daemon/stats.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/stats.c  -fPIC -DPIC -o .libs/stats.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/stats.c -o stats.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o unbound.lo -c daemon/unbound.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/unbound.c  -fPIC -DPIC -o .libs/unbound.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/unbound.c -o unbound.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o worker.lo -c daemon/worker.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/worker.c  -fPIC -DPIC -o .libs/worker.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c daemon/worker.c -o worker.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o strlcpy.lo -c compat/strlcpy.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c compat/strlcpy.c  -fPIC -DPIC -o .libs/strlcpy.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c compat/strlcpy.c -o strlcpy.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o context.lo -c libunbound/context.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c libunbound/context.c  -fPIC -DPIC -o .libs/context.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c libunbound/context.c -o context.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o libunbound.lo -c libunbound/libunbound.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c libunbound/libunbound.c  -fPIC -DPIC -o .libs/libunbound.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c libunbound/libunbound.c -o libunbound.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o libworker.lo -c libunbound/libworker.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c libunbound/libworker.c  -fPIC -DPIC -o .libs/libworker.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c libunbound/libworker.c -o libworker.o >/dev/null 2>&1
+./libtool --tag=CC --mode=link gcc  -I.  -g -O2 -flto -pthread   -version-info 4:1:2 -no-undefined -export-symbols ./libunbound/ubsyms.def -o libunbound.la context.lo libunbound.lo libworker.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo   netevent.lo listen_dnsport.lo outside_network.lo strlcpy.lo -rpath /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib -lssl -lldns   -lcrypto
+libtool: link: echo "{ global:" > .libs/libunbound.ver
+libtool: link:  cat ./libunbound/ubsyms.def | sed -e "s/\(.*\)/\1;/" >> .libs/libunbound.ver
+libtool: link:  echo "local: *; };" >> .libs/libunbound.ver
+libtool: link:  gcc -shared  -fPIC -DPIC  .libs/context.o .libs/libunbound.o .libs/libworker.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/strlcpy.o   -lssl -lldns -lcrypto  -O2 -flto -pthread   -pthread -Wl,-soname -Wl,libunbound.so.2 -Wl,-version-script -Wl,.libs/libunbound.ver -o .libs/libunbound.so.2.2.1
+libtool: link: (cd ".libs" && rm -f "libunbound.so.2" && ln -s "libunbound.so.2.2.1" "libunbound.so.2")
+libtool: link: (cd ".libs" && rm -f "libunbound.so" && ln -s "libunbound.so.2.2.1" "libunbound.so")
+libtool: link: /usr/bin/ar cru .libs/libunbound.a  context.o libunbound.o libworker.o dns.o infra.o rrset.o dname.o msgencode.o msgparse.o msgreply.o packed_rrset.o iterator.o iter_delegpt.o iter_donotq.o iter_fwd.o iter_hints.o iter_priv.o iter_resptype.o iter_scrub.o iter_utils.o localzone.o mesh.o modstack.o outbound_list.o alloc.o config_file.o configlexer.o configparser.o fptr_wlist.o locks.o log.o mini_event.o module.o net_help.o random.o rbtree.o regional.o rtt.o dnstree.o lookup3.o lruhash.o slabhash.o timehist.o tube.o winsock_event.o autotrust.o val_anchor.o validator.o val_kcache.o val_kentry.o val_neg.o val_nsec3.o val_nsec.o val_secalgo.o val_sigcrypt.o val_utils.o netevent.o listen_dnsport.o outside_network.o strlcpy.o
+libtool: link: ranlib .libs/libunbound.a
+libtool: link: ( cd ".libs" && rm -f "libunbound.la" && ln -s "../libunbound.la" "libunbound.la" )
+./libtool --tag=CC --mode=link gcc   -I.  -g -O2 -flto -pthread  -o unbound acl_list.lo cachedump.lo daemon.lo remote.lo stats.lo unbound.lo worker.lo  dns.lo infra.lo rrset.lo dname.lo msgencode.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo   netevent.lo listen_dnsport.lo outside_network.lo strlcpy.lo   -lssl -lldns   -lcrypto
+libtool: link: gcc -I. -g -O2 -flto -pthread -o unbound .libs/acl_list.o .libs/cachedump.o .libs/daemon.o .libs/remote.o .libs/stats.o .libs/unbound.o .libs/worker.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/strlcpy.o  -lssl -lldns -lcrypto -pthread 
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o unbound-checkconf.lo -c smallapp/unbound-checkconf.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-checkconf.c  -fPIC -DPIC -o .libs/unbound-checkconf.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-checkconf.c -o unbound-checkconf.o >/dev/null 2>&1
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o worker_cb.lo -c smallapp/worker_cb.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/worker_cb.c  -fPIC -DPIC -o .libs/worker_cb.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/worker_cb.c -o worker_cb.o >/dev/null 2>&1
+./libtool --tag=CC --mode=link gcc   -I.  -g -O2 -flto -pthread  -o unbound-checkconf unbound-checkconf.lo worker_cb.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo   netevent.lo listen_dnsport.lo outside_network.lo strlcpy.lo   -lssl -lldns   -lcrypto
+libtool: link: gcc -I. -g -O2 -flto -pthread -o unbound-checkconf .libs/unbound-checkconf.o .libs/worker_cb.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/strlcpy.o  -lssl -lldns -lcrypto -pthread 
+sed -e 's/@''UNBOUND_VERSION_MAJOR@/1/' -e 's/@''UNBOUND_VERSION_MINOR@/4/' -e 's/@''UNBOUND_VERSION_MICRO@/21/' < ./libunbound/unbound.h > unbound.h
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o unbound-host.lo -c smallapp/unbound-host.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-host.c  -fPIC -DPIC -o .libs/unbound-host.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-host.c -o unbound-host.o >/dev/null 2>&1
+./libtool --tag=CC --mode=link gcc   -I.  -g -O2 -flto -pthread  -o unbound-host unbound-host.lo strlcpy.lo  -L. -L.libs -lunbound -lldns   -lcrypto
+libtool: link: gcc -I. -g -O2 -flto -pthread -o .libs/unbound-host .libs/unbound-host.o .libs/strlcpy.o  -L. -L.libs /root/GITHUB/ANTENNA/Antenna/SPAM/UNBOUND/TEST/unbound-1.4.21/.libs/libunbound.so -lssl -lldns -lcrypto -pthread  -Wl,-rpath -Wl,/opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o unbound-control.lo -c smallapp/unbound-control.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-control.c  -fPIC -DPIC -o .libs/unbound-control.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-control.c -o unbound-control.o >/dev/null 2>&1
+./libtool --tag=CC --mode=link gcc   -I.  -g -O2 -flto -pthread  -o unbound-control unbound-control.lo  worker_cb.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo   netevent.lo listen_dnsport.lo outside_network.lo strlcpy.lo   -lssl -lldns   -lcrypto
+libtool: link: gcc -I. -g -O2 -flto -pthread -o unbound-control .libs/unbound-control.o .libs/worker_cb.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/strlcpy.o  -lssl -lldns -lcrypto -pthread 
+./libtool --tag=CC --mode=compile gcc -I.  -g -O2 -flto -pthread -o unbound-anchor.lo -c smallapp/unbound-anchor.c
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-anchor.c  -fPIC -DPIC -o .libs/unbound-anchor.o
+libtool: compile:  gcc -I. -g -O2 -flto -pthread -c smallapp/unbound-anchor.c -o unbound-anchor.o >/dev/null 2>&1
+./libtool --tag=CC --mode=link gcc   -I.  -g -O2 -flto -pthread  -o unbound-anchor unbound-anchor.lo strlcpy.lo  -L. -L.libs -lunbound -lexpat -lssl -lldns   -lcrypto
+libtool: link: gcc -I. -g -O2 -flto -pthread -o .libs/unbound-anchor .libs/unbound-anchor.o .libs/strlcpy.o  -L. -L.libs /root/GITHUB/ANTENNA/Antenna/SPAM/UNBOUND/TEST/unbound-1.4.21/.libs/libunbound.so /usr/lib/i386-linux-gnu/libexpat.so -lssl -lldns -lcrypto -pthread  -Wl,-rpath -Wl,/opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+sed -e 's:^DESTDIR=.*$:DESTDIR=/opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/etc/unbound:' < ./smallapp/unbound-control-setup.sh > unbound-control-setup
+chmod +x unbound-control-setup
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man8
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man5
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man3
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man1
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+./install-sh -m 755 -d /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/include
+./libtool --mode=install cp unbound /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound
+libtool: install: cp unbound /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound
+./libtool --mode=install cp unbound-checkconf /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-checkconf
+libtool: install: cp unbound-checkconf /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-checkconf
+./libtool --mode=install cp unbound-control /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-control
+libtool: install: cp unbound-control /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-control
+./libtool --mode=install cp unbound-host /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-host
+libtool: install: cp .libs/unbound-host /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-host
+./libtool --mode=install cp unbound-anchor /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-anchor
+libtool: install: cp .libs/unbound-anchor /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-anchor
+./install-sh -c -m 644 doc/unbound.8 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man8
+./install-sh -c -m 644 doc/unbound-checkconf.8 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man8
+./install-sh -c -m 644 doc/unbound-control.8 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man8
+./install-sh -c -m 644 doc/unbound-control.8 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man8/unbound-control-setup.8
+./install-sh -c -m 644 doc/unbound-anchor.8 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man8
+./install-sh -c -m 644 doc/unbound.conf.5 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man5
+./install-sh -c -m 644 ./doc/unbound-host.1 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man1
+./install-sh -c -m 644 doc/libunbound.3 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man3
+for mpage in ub_ctx ub_result ub_ctx_create ub_ctx_delete \
+		ub_ctx_set_option ub_ctx_get_option ub_ctx_config ub_ctx_set_fwd \
+		ub_ctx_resolvconf ub_ctx_hosts ub_ctx_add_ta ub_ctx_add_ta_file \
+		ub_ctx_trustedkeys ub_ctx_debugout ub_ctx_debuglevel ub_ctx_async \
+		ub_poll ub_wait ub_fd ub_process ub_resolve ub_resolve_async ub_cancel \
+		ub_resolve_free ub_strerror ub_ctx_print_local_zones ub_ctx_zone_add \
+		ub_ctx_zone_remove ub_ctx_data_add ub_ctx_data_remove; \
+	do \
+		echo ".so man3/libunbound.3" > /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/share/man/man3/$mpage.3 ; \
+	done
+./install-sh -c -m 755 unbound-control-setup /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound-control-setup
+if test ! -e /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/etc/unbound/unbound.conf; then ./install-sh -d `dirname /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/etc/unbound/unbound.conf`; ./install-sh -c -m 644 doc/example.conf /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/etc/unbound/unbound.conf; fi
+./libtool --mode=install cp unbound.h /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/include/unbound.h
+libtool: install: cp unbound.h /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/include/unbound.h
+./libtool --mode=install cp libunbound.la /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+libtool: install: cp .libs/libunbound.so.2.2.1 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib/libunbound.so.2.2.1
+libtool: install: (cd /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib && { ln -s -f libunbound.so.2.2.1 libunbound.so.2 || { rm -f libunbound.so.2 && ln -s libunbound.so.2.2.1 libunbound.so.2; }; })
+libtool: install: (cd /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib && { ln -s -f libunbound.so.2.2.1 libunbound.so || { rm -f libunbound.so && ln -s libunbound.so.2.2.1 libunbound.so; }; })
+libtool: install: cp .libs/libunbound.lai /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib/libunbound.la
+libtool: install: cp .libs/libunbound.a /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib/libunbound.a
+libtool: install: chmod 644 /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib/libunbound.a
+libtool: install: ranlib /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib/libunbound.a
+libtool: finish: PATH="/root:/home/linux:/root:/home/DATI/CHROOT/Andromeda:/root/ANDRMD:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/sbin" ldconfig -n /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+./libtool --mode=finish /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+libtool: finish: PATH="/root:/home/linux:/root:/home/DATI/CHROOT/Andromeda:/root/ANDRMD:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/sbin" ldconfig -n /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+Unbound ready in App folder
+to install just:
+mkdir /opt/Unbound
+than
+mv App /opt/Unbound/App
+Add a new system username: Unbound
+fine tune unbound.conf..take inspiration from unbound.conf.template and put it into /opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/etc/unbound/
+Clean /etc/resolv.conf and put only: 127.0.0.1
+bang Unbound from root with:
+export LD_LIBRARY_PATH=/opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/lib:$LD_LIBRARY_PATH
+export PATH=/opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin:$PATH
+/opt/Unbound/.App/ioUnbound1.4.21-Debian7/Linux-ia32/sbin/unbound

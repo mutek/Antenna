@@ -68,7 +68,7 @@ rm --preserve-root -r $BASE_DIR/$APP_NAME
 
 # ready...
 echo $APP_NAME" ready in App folder"
-echo "" to install just:"
+echo "to install just:"
 echo "mkdir "$BASE_DIR"/"$APP_NAME
 echo "than"
 echo "mv App "$BASE_DIR"/"$APP_NAME"/App"
