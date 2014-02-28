@@ -9,3 +9,6 @@ calcola il rapporto segnale rumore in funzione dei parametri caratteristici di u
 Bookmarks
 
 http://www.digdice.com/
+http://www.maximintegrated.com/app-notes/index.mvp/id/2875
+http://www.rf-amplifiers.com/index.php?topic=noise_figure
+
