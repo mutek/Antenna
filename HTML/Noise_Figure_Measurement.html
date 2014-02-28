@@ -1,0 +1,2227 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Three Methods of Noise Figure Measurement - Tutorial - Maxim</title>
+
+<meta name="keywords" content="rf,rfic,wireless,noisefigure measurement,gain,meter,y factor, rf ics, rfics">
+<meta name="description" content="Three different methods to measure noise figure are presented: Gain method, Y-factor method, and the Noise Figure Meter method.">
+<link rel="canonical" href="/app-notes/index.mvp/id/2875"/>
+
+<link rel="stylesheet" type="text/css" href="/maxkit/styles/d.121/default.css">
+
+
+<script type="text/javascript" src="/maxkit/js/lib/base-min.js"></script>
+<script type="text/javascript">
+init_major_vars();
+if (Lang) { Lang.select('en'); }
+</script>
+<script type="text/javascript">
+var Mary = new Array(    "0",    "1");
+</script>
+
+
+<script type="text/javascript" src="/js/AutoTracker.js"></script>
+<script type="text/javascript" src="/js/ga_header.js"></script>
+<script type="text/javascript">
+    if (typeof(Mary) != 'undefined' && Mary[0] == 1) { _gaq.push(set_GA_CV1); }
+</script>
+
+
+
+</head>
+<body class="s01"
+    bgcolor="#FFFFFF" width="960"
+    link="#0000FF" alink="#0000FF" vlink="#0000FF" text="#000000"
+    marginwidth="0" marginheight="0" leftmargin="0" topmargin="0"
+    
+>
+
+
+
+
+
+
+    <!-- FILE CACHE [23331] (SITE HEADER): HIT -->
+<!-- ================================================================== -->
+<!-- BEGIN: SITE HEADER -->
+<!-- ================================================================== -->
+
+<div id="site-header" align="center">
+<div id="site-header-edge1"></div>
+<table id="site-header-table1" border="0" cellpadding="0" cellspacing="0" width="960">
+<tr valign="top">
+<td id="site-header-box1" width="100%">
+
+<!-- ======================================= -->
+
+<!-- BEGIN: SITE CONTROL PANEL (scp) -->
+<div id="scp-shell">
+
+<table id="scp-table1" border="0" cellpadding="4" cellspacing="0" width="100%">
+<form name="scp_form">
+<tr valign="middle">
+    <td id="scp-box1" align="left" width="98%">
+    <br>
+    </td>
+    <td id="scp-box2" align="right" width="1%">
+    
+
+
+<!-- BEGIN: MYMAXIM CONTROL -->
+<nobr>
+<a class="scp" href="https://memcenter.maximintegrated.com/guest/login.mvp?auto_return=1&goal_url=http%3A%2F%2Fwww.maximintegrated.com%2Fapp-notes%2Findex.mvp%2Fid%2F2875">Login</a>
+&nbsp;&nbsp;&nbsp; <a class="scp" href="https://memcenter.maximintegrated.com/guest/register.mvp?goal_url=http%3A%2F%2Fwww.maximintegrated.com%2Fapp-notes%2Findex.mvp%2Fid%2F2875">Register</a>
+</nobr>
+<!-- END: MYMAXIM CONTROL -->
+
+
+
+    
+    </td>
+    <td id="scp-box3" align="right" width="1%">
+    
+
+
+<noscript>
+<style>
+/* select.s90 { display: none; } */
+#scp-lang-menu { display: none; }
+</style>
+<a class=s02 Href="http://www.maximintegrated.com/console/lang/router.mvp?lang=en&url=http%3A%2F%2Fwww.maximintegrated.com%2Fapp-notes%2Findex.mvp%2Fid%2F2875">English</a>
+</noscript>
+
+<!-- BEGIN: LANG SWITCH MENU -->
+<select id="scp-lang-menu" name="lsw_menu" onChange="lsw_change_cb();">
+<option value="http://www.maximintegrated.com/app-notes/index.mvp/id/2875" selected> English
+<option value="http://china.maximintegrated.com/app-notes/index.mvp/id/2875" > 简体中文 (cn)
+<option value="http://japan.maximintegrated.com/app-notes/index.mvp/id/2875" > 日本語 (jp)
+</select>
+<!-- END: LANG SWITCH MENU -->
+
+<script language="Javascript">
+function lsw_change_cb()
+{
+    // var menu = document.site_control_form.lsw_menu;
+    var menu = document.scp_form.lsw_menu;
+    var option = menu.options[menu.selectedIndex];
+    if (option.value) {
+	document.body.style.cursor = "wait";	// immediate feedback
+	window.location = option.value;
+    }
+    else {
+	alert("URL value is missing.");
+    }
+}
+</script>
+
+
+    
+    </td>
+</tr>
+</form>
+</table>
+
+</div><!-- /scp-shell -->
+<!-- END: SITE CONTROL PANEL (scp) -->
+
+<!-- ======================================= -->
+
+<!-- BEGIN: SITE MARQUEE PANEL (smp) -->
+<div id="smp-shell">
+
+<table id="smp-table1" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <!-- LOGO CELL: keep div tight on the img for IE -->
+    <td id="smp-box1" align="left" width="98%">
+	<div id="site-logo-box"><a href="http://www.maximintegrated.com"><img border="0" width="172" height="49" src="/maxkit/images/maxim-logo-202.gif" vspace="0" hspace="0"></a></div>
+    </td>
+
+    <!-- SPACER CELL -->
+    <td id="smp-box2" align="right" width="1%"><br></td>
+
+    <!-- OTHER CELL -->
+    <td id="smp-box3" align="right" width="1%"><br></td>
+</tr>
+</table>
+
+</div>
+<!-- END: SITE MARQUEE PANEL (smp) -->
+
+<!-- ======================================= -->
+
+<!-- BEGIN: SITE NAVBAR (snb) -->
+<div id="snb-shell">
+
+<table id="snb-table1" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr align="left" valign="middle">
+    <!-- NAVBAR CELLS -->
+    <td id="snb-box1" align="left" width="98%">
+    <div id="snb-tab-shell">
+    <div id="snb-s1-cell"><nobr><a id="snb-s1-link" class="snb1" href="http://www.maximintegrated.com/products/" onClick="open_navpad('s1');return(false);">Products</a></nobr></div>
+    <div id="snb-s2-cell"><nobr><a id="snb-s2-link" class="snb1" href="http://www.maximintegrated.com/solutions/" onClick="open_navpad('s2');return(false);">Solutions</a></nobr></div>
+    <div id="snb-s3-cell"><nobr><a id="snb-s3-link" class="snb1" href="http://www.maximintegrated.com/design/" onClick="open_navpad('s3');return(false);">Design</a></nobr></div>
+    <div id="snb-s4-cell"><nobr><a id="snb-s4-link" class="snb1" href="http://www.maximintegrated.com/sales/" onClick="open_navpad('s4');return(false);">Buy</a></nobr></div>
+    <div id="snb-s5-cell"><nobr><a id="snb-s5-link" class="snb1" href="https://support.maximintegrated.com/" onClick="open_navpad('s5');return(false);">Support</a></nobr></div>
+    <div id="snb-s6-cell"><nobr><a id="snb-s6-link" class="snb1" href="http://www.maximintegrated.com/company/" onClick="open_navpad('s6');return(false);">About&nbsp;Us</a></nobr></div>
+    <div id="snb-s7-cell"><nobr><a id="snb-s7-link" class="snb1" href="https://my.maximintegrated.com/" onClick="open_navpad('s7');return(false);">My&nbsp;Maxim</a></nobr></div>
+    </div>
+    </td>
+
+    <!-- SPACER CELL -->
+    <td id="snb-box2" align="right" width="1%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+    <!-- SEARCH CELL -->
+    <td id="snb-box3" align="right" width="1%">
+    <div id="site-search-box" style="padding-bottom: 5px;">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	    <form name="power_search" method="get" action="http://www.maximintegrated.com/pst/run.mvp">
+	    <td id="site-search-input-cell" align="left">
+	    <input id="site-search-input" type="text" name="q" value="" size="35" maxlength="255">
+	    </td>
+	    <td id="site-search-btn-cell" align="middle" width="1%"><input id="site-search-btn" type="image" width="24" height="24" src="/maxkit/images/search/magnify-200-en.jpg" value="submit" border="0" name="image" vspace="0" hspace="0"></td>
+	    </form>
+	</tr>
+	</table>
+    </div>
+    </td>
+</tr>
+</table>
+
+</div>
+<!-- END: SITE NAVBAR (snb) -->
+
+<!-- ======================================= -->
+
+</td><!-- /site-header-box1 -->
+</tr>
+</table><!-- /site-header-table1 -->
+<div id="site-header-edge2" align="center"><img width="960" height="1" src="/maxkit/dots/clear_dot.gif"><br></div>
+</div><!-- /site-header -->
+
+<!-- ======================================= -->
+
+<!-- BEGIN: SITE NAVPAD (snp) -->
+<!-- do not remove the height/display properties -->
+<div id="snp-drawer" align="center" style="display:none; height:350px;">
+<div id="snp-drawer-frame">
+<div id="snp-drawer-body">
+<div id="snp-router" class="snp-router-shell" align="left">
+
+
+<!-- =========================================================== -->
+
+<div id="snp-router-s1p1" class="snp-router-image-panel" style="display:none;"></div>
+<div id="snp-router-s1p2" class="snp-router-text-panel"  style="display:none;">
+
+<div class="snp-slide-header">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b><a href="http://www.maximintegrated.com/products/">Products Overview</a></b>
+    </nobr></td>
+    <td class="snp" onClick="navpad.drawer_close();" style="cursor: pointer;"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="/" onClick="navpad.drawer_close();return(false);"><img border="0" width="15" height="10" src="/maxkit/images/arrow-up-100.png"></a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-body">
+<table class="default" cellpadding="1" cellspacing="0" width="100%">
+<tr valign="top">
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr><a href="http://www.maximintegrated.com/products/1-wire-and-ibutton.mvp">1-Wire and iButton</a><br>
+<a href="http://www.maximintegrated.com/products/amps/">Amplifiers</a><br>
+<a href="http://www.maximintegrated.com/products/switches/">Analog Switches and Multiplexers</a><br>
+<a href="http://www.maximintegrated.com/products/audio/">Audio</a><br>
+<a href="http://www.maximintegrated.com/products/automotive/">Automotive</a><br>
+<a href="http://www.maximintegrated.com/products/clocks/">Clock Generation and Distribution</a><br>
+<a href="http://www.maximintegrated.com/products/data_converters/">Data Converters</a><br>
+<a href="http://www.maximintegrated.com/products/ds-ip/">Design Services and Analog IP Blocks</a><br>
+<a href="http://www.maximintegrated.com/products/data_converters/digi-pot/">Digital Potentiometers</a><br>
+<a href="http://www.maximintegrated.com/products/embedded-security/">Embedded Security</a><br>
+<a href="http://www.maximintegrated.com/products/energy/">Energy-Measurement and Metering SoCs</a><br>
+<a href="http://www.maximintegrated.com/products/filters/">Filters (Analog)</a><br>
+<a href="http://www.maximintegrated.com/products/interface/">Interface</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+<a href="http://www.maximintegrated.com/products/memory/">Memory</a><br>
+<a href="http://www.maximintegrated.com/products/microcontrollers/">Microcontrollers</a><br>
+<a href="http://www.maximintegrated.com/products/military/">Military and Aerospace</a><br>
+<a href="http://www.maximintegrated.com/products/optical/">Optical Communications</a><br>
+<a href="http://www.maximintegrated.com/products/power/">Power and Battery Management</a><br>
+<a href="http://www.maximintegrated.com/products/powerline/">Powerline Networking</a><br>
+<a href="http://www.maximintegrated.com/products/rtc/">Real-Time Clocks</a><br>
+<a href="http://www.maximintegrated.com/products/sensors/">Sensors and Sensor Interface</a><br>
+<a href="http://www.maximintegrated.com/products/supervisors/">Supervisors, Voltage Monitors, Sequencers</a><br>
+<a href="http://www.maximintegrated.com/products/t_e_carrier/">T/E Carrier and Packetized Communications</a><br>
+<a href="http://www.maximintegrated.com/products/video/">Video</a><br>
+<a href="http://www.maximintegrated.com/products/references/">Voltage References</a><br>
+<a href="http://www.maximintegrated.com/products/wireless/">Wireless and RF</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+</tr>
+</table>
+</div>
+<div class="snp-slide-footer">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b>Related:</b>
+    <a href="http://para.maximintegrated.com/">Parametric Search</a>
+    | <a href="http://www.maximintegrated.com/whatsnew/">What's New</a> | <a href="http://www.maximintegrated.com/patents/">Patent Marking</a>
+    </nobr></td>
+    <td class="snp"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="https://support.maximintegrated.com/tech_support/router.mvp">Didn't Find What You Need?</a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+
+</div><!-- end slide text -->
+
+
+<!-- =========================================================== -->
+
+<div id="snp-router-s2p1" class="snp-router-image-panel" style="display:none;"></div>
+<div id="snp-router-s2p2" class="snp-router-text-panel"  style="display:none;">
+
+<div class="snp-slide-header">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b><a href="http://www.maximintegrated.com/solutions/">Solutions Overview</a></b>
+    <!--
+    | <a href="/" onClick="view_section('s2','solutions','solutions-alpha.mvp');return(false);">Test</a>
+    -->
+    </nobr></td>
+    <td class="snp" onClick="navpad.drawer_close();" style="cursor: pointer;"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="/" onClick="navpad.drawer_close();return(false);"><img border="0" width="15" height="10" src="/maxkit/images/arrow-up-100.png"></a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-body">
+<table class="default" cellpadding="1" cellspacing="0" width="100%">
+<tr valign="top">
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr><b><a href="http://www.maximintegrated.com/solutions/nav/automotive/index.mvp">Automotive and Transpo...</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/automotive/electric_vehicles/index.mvp">Electric Vehicles</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/automotive/infotainment/index.mvp">Infotainment Systems</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/automotive/automotive-systems/index.mvp">Automotive Systems</a><br>
+<br>
+<b><a href="http://www.maximintegrated.com/solutions/nav/communications_and_networking/index.mvp">Communications and Net...</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/communications_and_networking/cable_infrastructure/index.mvp">Cable Infrastructure</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/communications_and_networking/datacom/index.mvp">Datacom</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/communications_and_networking/optical_networking/index.mvp">Optical Networking</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/communications_and_networking/telecom/index.mvp">Telecom</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/communications_and_networking/wireless_infrastructure/index.mvp">Wireless Infrastructure</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/communications_and_networking/wireless_lan/index.mvp">Wireless Network</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+<b><a href="http://www.maximintegrated.com/solutions/nav/consumer_electronics/index.mvp">Consumer Electronics</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/consumer_electronics/cell_phone_smartphone/index.mvp">Cell Phone/Smartphone</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/consumer_electronics/home-video/index.mvp">Home Video</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/consumer_electronics/mp3_portable_media/index.mvp">MP3/Portable Media Player</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/consumer_electronics/tablets/index.mvp">Tablets</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/consumer_electronics/wireless_handheld/index.mvp">Wireless Handheld</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+<b><a href="http://www.maximintegrated.com/solutions/nav/computing_and_storage/index.mvp">Computing and Storage</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/computing_and_storage/desktops_and_servers/index.mvp">Desktops and Servers</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/computing_and_storage/financial_terminals/index.mvp">Financial Terminals</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/computing_and_storage/notebook_computers/index.mvp">Notebook Computers</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/computing_and_storage/storage/index.mvp">Storage</a><br>
+<br>
+<b><a href="http://www.maximintegrated.com/solutions/nav/energy/index.mvp">Energy</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/energy/generation/index.mvp">Generation</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/energy/distribution/index.mvp">Distribution</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/energy/consumption/index.mvp">Consumption</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/energy/communications/index.mvp">Communications</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+<b><a href="http://www.maximintegrated.com/solutions/nav/industrial/index.mvp">Industrial</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/industrial/control_and_automation/index.mvp">Control and Automation</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/industrial/power/index.mvp">Industrial Power</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/industrial/test_and_measurement/index.mvp">Test and Measurement</a><br>
+<br>
+<b><a href="http://www.maximintegrated.com/solutions/nav/medical/index.mvp">Medical</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/medical/diagnostics/index.mvp">Diagnostics, Monitorin...</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/medical/home_medical/index.mvp">Home Medical</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/medical/imaging/index.mvp">Medical Imaging</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/medical/instruments/index.mvp">Medical Instruments</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+<b><a href="http://www.maximintegrated.com/solutions/nav/military-aerospace/index.mvp">Military and Aerospace</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/military-aerospace/handheld-portable/index.mvp">Handheld/Portable</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/military-aerospace/satellite-ground/index.mvp">Satellite Ground Suppo...</a><br>
+<br>
+<hr size="1">
+<br>
+<b><a href="http://www.maximintegrated.com/solutions/nav/bba/index.mvp">Building Block Advisor</a></b><br>
+<a href="http://www.maximintegrated.com/solutions/nav/bba/../../analog-signal-chain/index.mvp">Analog Signal Chain</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/bba/../../power-architecture/index.mvp">Power Architecture</a><br>
+<a href="http://www.maximintegrated.com/solutions/nav/bba/../../fpga-power/index.mvp">FPGA Power</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+</tr>
+</table>
+</div>
+<div class="snp-slide-footer">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b>Related:</b>
+    <a href="http://www.maximintegrated.com/featured/analog-integration/">Analog Integration Microsite</a>
+    <!--
+    <a href="http://www.maximintegrated.com/solutions/nav/all-solutions.mvp?view=alpha">Alphabetical Listing</a>
+    -->
+    </nobr></td>
+    <td class="snp"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="https://support.maximintegrated.com/tech_support/router.mvp">Didn't Find What You Need?</a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+
+</div><!-- end slide text -->
+
+
+<!-- =========================================================== -->
+
+<div id="snp-router-s3p1" class="snp-router-image-panel" style="display:none;"></div>
+<div id="snp-router-s3p2" class="snp-router-text-panel"  style="display:none;">
+
+<div class="snp-slide-header">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b><a href="http://www.maximintegrated.com/design/">Design Overview</a></b>
+    </nobr></td>
+    <td class="snp" onClick="navpad.drawer_close();" style="cursor: pointer;"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="/" onClick="navpad.drawer_close();return(false);"><img border="0" width="15" height="10" src="/maxkit/images/arrow-up-100.png"></a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-body">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="20%">
+<nobr>
+<a href="http://www.maximintegrated.com/design/techdocs/index.mvp"><b>Technical Documents</b></a><br>
+<a href="http://www.maximintegrated.com/design/techdocs/app-notes/index.mvp">Application Notes</a><br>
+<a href="http://www.maximintegrated.com/design/techdocs/reference-designs/index.mvp">Reference Design Center</a><br>
+<a href="http://www.maximintegrated.com/design/techdocs/tutorials/index.mvp">Tutorials</a><br>
+<a href="http://www.maximintegrated.com/design/techdocs/product-guides/index.mvp">Product Guides</a><br>
+<a href="http://www.maximintegrated.com/design/techdocs/solutions-guides/index.mvp">Solutions Guides</a><br>
+<a href="http://www.maximintegrated.com/design/techdocs/brochures/index.mvp">Brochures</a><br>
+<a href="http://www.maximintegrated.com/design/techdocs/user-guides/index.mvp">User Guides and Manuals</a><br>
+<a href="http://www.maximintegrated.com/videos/index.mvp/label/Products">Product Videos</a><br>
+<a href="http://www.maximintegrated.com/videos/index.mvp/label/Demos">Demo Videos</a><br>
+<a href="http://www.maximintegrated.com/search/parts.mvp">Data Sheets</a><br>
+</nobr>
+</td>
+<td>      </td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%">
+<nobr>
+<a href="http://www.maximintegrated.com/design/tools/"><b>Design Tools, Models, Software</b></a><br>
+<a href="http://www.maximintegrated.com/design/tools/modeling-simulation/">Modeling/Simulation</a><br>
+<a href="http://www.maximintegrated.com/ee_sim/">EE-Sim</a><br>
+<a href="http://www.maximintegrated.com/design/tools/cad-layout/">CAD and Layout</a><br>
+<a href="http://www.maximintegrated.com/products/evkits/">Evaluation Kits</a><br>
+<a href="http://www.maximintegrated.com/cookbook/powersupply/">Power-Supply Cookbook</a><br>
+<a href="http://www.maximintegrated.com/design/tools/applications/">Applications Software</a><br>
+<a href="http://www.maximintegrated.com/design/tools/calculators/">Calculators</a><br>
+</nobr>
+</td>
+<td>      </td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%">
+<nobr>
+<a href="http://www.maximintegrated.com/design/manufacturing.cfm"><b>Packaging and Reliability</b></a><br>
+<a href="http://www.maximintegrated.com/design/packaging/index.mvp?a=0&f=">Packaging Information</a><br>
+<a href="http://www.maximintegrated.com/design/packaging/index.mvp?a=1&f=">Packaging Outline Drawings</a><br>
+<a href="http://www.maximintegrated.com/design/packaging/index.mvp?a=2&f=">Land Pattern Drawings</a><br>
+<a href="http://www.maximintegrated.com/qa/">QA and Reliability Information</a><br>
+<div class="snp-link2">
+<a href="http://www.maximintegrated.com/emmi/">Environmental Management<br>and Materials Information<br>(EMMI)</a><br>
+</div>
+<a href="http://www.maximintegrated.com/emmi/content_lookup.cfm">Lead-Free/RoHS Lookup</a><br>
+<a href="http://www.maximintegrated.com/design/packaging/topmark/">Topmark Code Lookup</a><br>
+</nobr>
+</td>
+<td>      </td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="20%">
+<nobr>
+<a href="http://www.maximintegrated.com/design/find_products.cfm"><b>Part Selection</b></a><br>
+<a href="http://para.maximintegrated.com/">Parametric Search</a><br>
+<a href="http://www.maximintegrated.com/search/parts.mvp">Part Number Search</a><br>
+<a href="http://www.maximintegrated.com/whatsnew/">What's New</a><br>
+<a href="http://www.maximintegrated.com/products/cross_reference">Cross-Reference Search</a><br>
+<a href="https://support.maximintegrated.com/psa/router.mvp">Part Selection Advice</a><br>
+</nobr>
+</td>
+<td>      </td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="20%">
+<nobr>
+<a href="http://www.maximintegrated.com/design/fpga-design-resources/"><b>Design for FPGAs</b></a><br>
+<a href="https://support.maximintegrated.com/en/tech_support/router.mvp"><b>Technical Support</b></a><br>
+<a href="http://www.maximintegrated.com/samples/"><b>Free Samples</b></a><br>
+<a href="http://www.maximintegrated.com/glossary/"><b>EE Glossary</b></a><br>
+<a href="https://my.maximintegrated.com/ee-mail/outbox/msg.mvp?blast_id=current"><b>EE-Mail Newsletter</b></a><br>
+</nobr>
+</td>
+
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-footer">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <td class="snp" align="left" width="1%"><nobr>
+    <!-- <b>Related:</b> -->
+    </nobr></td>
+    <td class="snp"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="https://support.maximintegrated.com/tech_support/router.mvp">Didn't Find What You Need?</a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+</div><!-- end slide text -->
+
+
+<!-- =========================================================== -->
+
+<div id="snp-router-s4p1" class="snp-router-image-panel" style="display:none;"></div>
+<div id="snp-router-s4p2" class="snp-router-text-panel"  style="display:none;">
+
+<div class="snp-slide-header">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b><a href="http://www.maximintegrated.com/sales/">Buy Overview</a></b>
+    </nobr></td>
+    <td class="snp" onClick="navpad.drawer_close();" style="cursor: pointer;"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="/" onClick="navpad.drawer_close();return(false);"><img border="0" width="15" height="10" src="/maxkit/images/arrow-up-100.png"></a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-body">
+<table class="default" cellpadding="0" cellspacing="0" width="75%">
+<tr valign="top">
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%">
+<nobr>
+<b class="snp-head1">Buy Direct</b><br>
+<a href="https://shop.maximintegrated.com/storefront/pricesearch.do?mode=first&event=PartSearchLoad&menuitem=PriceAndAvailability">Price and Availability Search</a><br>
+
+<form class="s01" name="PartSearchForm" method="post" action="https://shop.maximintegrated.com/storefront/viewpriceavailable.do?event=PartSearch&menuitem=PriceAndAvailability" style="display: block;">
+<input class="small" type="text" name="Partnumber" maxlength="25" size="27" value="">
+&nbsp;
+<input class="default_btn" type="submit" name="event_PartSearch" value="Search">
+<br>
+</form>
+
+<a href="https://shop.maximintegrated.com/storefront/shoppingcart.do?event=ShowShoppingCart&menuitem=Order">Order Online</a><br>
+<a href="http://www.maximintegrated.com/samples">Free Samples</a><br>
+<a href="http://www.maximintegrated.com/sales/prototypes.cfm">Prototypes</a><br>
+<a href="http://www.maximintegrated.com/sales/direct.cfm">Order by Phone</a><br>
+<a href="http://www.maximintegrated.com/sales/direct.cfm">Order by Fax or Email</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%">
+<nobr>
+<b class="snp-head1">Sales and Distribution</b><br>
+<a href="http://www.maximintegrated.com/sales/offices/distributor/direct.mvp">Worldwide Sales Offices</a><br>
+<a href="http://www.maximintegrated.com/sales/offices/distributor/franchise.mvp">Worldwide Franchised Distributors</a><br>
+<a href="http://www.maximintegrated.com/sales/eol-distributor.cfm">Authorized End-of-Life Distributors</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%">
+<nobr>
+<b class="snp-head1">Customer Service</b><br>
+<a href="https://shop.maximintegrated.com/storefront/myorder.do?event=Myorders&menuitem=MyOrder">View Order Status</a><br>
+<a href="https://shop.maximintegrated.com/storefront/update.do?event=Continue&menuitem=MyAddresses">My Account</a><br>
+<a href="https://support.maximintegrated.com/en/sales/order_status_changes.mvp">Contact Us</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02">
+<nobr>
+<b class="snp-head1">Surplus Semiconductor Equipment</b><br>
+<a href="http://www.maximintegrated.com/sales/surplus-equipment/">Front-End Fab Equipment</a><br>
+<a href="/sales/surplus-equipment/back-end.cfm">Back-End Test Equipment </a><br>
+</nobr>
+</td>
+
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-footer">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <td class="snp" align="left" width="1%"><nobr>
+    <!-- <b>Related:</b> -->
+    </nobr></td>
+    <td class="snp"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="https://support.maximintegrated.com/sales/other_comments.mvp">Didn't Find What You Need?</a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+</div><!-- end slide text -->
+
+
+<!-- =========================================================== -->
+
+<div id="snp-router-s5p1" class="snp-router-image-panel" style="display:none;"></div>
+<div id="snp-router-s5p2" class="snp-router-text-panel"  style="display:none;">
+
+<div class="snp-slide-header">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b><a href="https://support.maximintegrated.com/">Support Overview</a></b>
+    </nobr></td>
+    <td class="snp" onClick="navpad.drawer_close();" style="cursor: pointer;"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="/" onClick="navpad.drawer_close();return(false);"><img border="0" width="15" height="10" src="/maxkit/images/arrow-up-100.png"></a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-body">
+<table class="default" cellpadding="0" cellspacing="0" width="75%">
+<tr valign="top">
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%">
+<nobr>
+<b class="snp-head1">Technical Support</b><br>
+<a href="https://support.maximintegrated.com/tech_support/router.mvp">Technical Support by Email</a><br>
+<a href="https://support.maximintegrated.com/tech_support/phone.mvp">Technical Support by Phone</a><br>
+<a href="https://support.maximintegrated.com/psa/router.mvp">Part Selection Advice</a><br>
+<br>
+<b class="snp-head1">Other Requests</b><br>
+<a href="https://support.maximintegrated.com/contact_us/other_issues.mvp">Report Website Issues</a><br>
+<a href="https://support.maximintegrated.com/center.mvp">Index of Support Options</a><br>
+</nobr>
+</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%" style="padding-left:30;">
+<nobr>
+<b class="snp-head1">Sales Information</b><br>
+<a href="https://support.maximintegrated.com/sales/price_and_availability.mvp">Price and Availability</a><br>
+<a href="https://support.maximintegrated.com/sales/order_status_changes.mvp">Order Status or Changes</a><br>
+<a href="http://shop.maximintegrated.com/">Buy Online</a><br>
+<a href="http://www.maximintegrated.com/sales/offices/distributor/franchise.mvp">Worldwide Franchised Distributors</a><br>
+<a href="http://www.maximintegrated.com/samples/">Request Samples</a><br>
+<a href="http://www.maximintegrated.com/company/policy/counterfeit-parts.cfm">Ensuring Genuine Maxim Products</a><br>
+</nobr>
+</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%" style="padding-left:30;">
+<nobr>
+<b class="snp-head1">Customer Service</b><br>
+<b class="snp-head2">North America</b><br>
+888-Maxim-IC (888-629-4642)
+<div class=text10>
+<script language="javascript">
+var name = "sales-us@";
+var domain = "maximintegrated.com";
+document.write ("<a href=mailto:" + name + domain + ">" + name + domain + "</a>");
+</script></div>
+
+<b class="snp-head2">Europe</b><br>
++ 353 (0) 1 223 5500<br>
+<script language="javascript">
+var name = "sales-europe@";
+var domain = "maximintegrated.com";
+document.write ("<a href=mailto:" + name + domain + ">" + name + domain + "</a>");
+</script>
+</nobr>
+</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="25%" style="padding-left:30;">
+<nobr><br>
+<b class="snp-head2">Asia and Oceania</b><br>
++ 886-2-8770-5666<br>
+<script language="javascript">
+var name = "sales-asia@";
+var domain = "maximintegrated.com";
+document.write ("<a href=mailto:" + name + domain + ">" + name + domain + "</a>");
+</script><br>
+<script language="javascript">
+var name = "sales-japan@";
+var domain = "maximintegrated.com";
+document.write ("<a href=mailto:" + name + domain + ">" + name + domain + "</a>");
+</script><br>
+<script language="javascript">
+var name = "sales-korea@";
+var domain = "maximintegrated.com";
+document.write ("<a href=mailto:" + name + domain + ">" + name + domain + "</a>");
+</script><br>
+<script language="javascript">
+var name = "sales-australia@";
+var domain = "maximintegrated.com";
+document.write ("<a href=mailto:" + name + domain + ">" + name + domain + "</a>");
+</script><br>
+<script language="javascript">
+var name = "sales-newzealand@";
+var domain = "maximintegrated.com";
+document.write ("<a href=mailto:" + name + domain + ">" + name + domain + "</a>");
+</script><br>
+</nobr>
+</td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-footer">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <td class="snp" align="left" width="1%"><nobr>
+    <!-- <b>Related:</b> -->
+    </nobr></td>
+    <td class="snp"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="https://support.maximintegrated.com/contact_us/other_issues.mvp">Didn't Find What You Need?</a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+</div><!-- end slide text -->
+
+
+<!-- =========================================================== -->
+
+<div id="snp-router-s6p1" class="snp-router-image-panel" style="display:none;"></div>
+<div id="snp-router-s6p2" class="snp-router-text-panel"  style="display:none;">
+
+<div class="snp-slide-header">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b><a href="http://www.maximintegrated.com/company/">About Us Overview</a></b>
+    </nobr></td>
+    <td class="snp" onClick="navpad.drawer_close();" style="cursor: pointer;"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="/" onClick="navpad.drawer_close();return(false);"><img border="0" width="15" height="10" src="/maxkit/images/arrow-up-100.png"></a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-body">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="20%">
+<nobr>
+<a href="http://www.maximintegrated.com/company/values/">Our Values</a><br>
+<a href="http://www.maximintegrated.com/company/investor/">Investor Relations</a><br>
+<a href="http://www.maximintegrated.com/company/careers/">Careers</a><br>
+<a href="http://www.maximintegrated.com/company/corporate-responsibility/">Corporate Responsibility</a><br>
+<a href="http://www.maximintegrated.com/company/corporate-responsibility/suppliers/">Partnerships with Suppliers</a><br>
+<a href="http://www.maximintegrated.com/company/locations/">Worldwide Locations</a><br>
+<a href="http://www.maximintegrated.com/company/leadership/">Leadership</a><br>
+<a href="http://www.maximintegrated.com/company/newsroom/">Newsroom</a><br>
+<a href="http://www.maximintegrated.com/company/awards/">Awards</a><br>
+<a href="http://www.maximintegrated.com/company/contact/">Contact Us</a><br>
+<br>
+<b></b><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="50%">
+<nobr>
+<b class="snp-head1">Maxim at a Glance</b><br>
+At Maxim, we invent highly integrated solutions that make technology <br>seamless. We channel our collective expertise to stretch the limits of <br>technology, understand your needs, and help you get to market faster.<br>
+<br>
+
+<b class="snp-head1">Financial Strength</b><br>
+$2.4 billion (approx.) revenue in FY2013<br>
+$585 million revenue in Q1 FY2014<br>
+$3.76 billion in assets in Q1 FY2014<br>
+$1.03 billion in cash in Q1 FY2014<br>
+<br>
+
+<!--
+<b class="snp-head1">Global Resources and Support</b><br>
+24 sales offices<br>
+40 technology design centers<br>
+11 wafer fabs and test facilities<br>
+-->
+</nobr>
+</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="30%">
+<b class="snp-head1">Quick Facts</b><br>
+<table class="default" cellpadding="0" cellspacing="0">
+<tr valign="top">
+<td>
+<nobr>
+<b class="snp-head2">President and CEO</b><br>
+Tun&ccedil; Doluca<br>
+<br>
+<b class="snp-head2">Headquarters</b><br>
+San Jose, CA, U.S.<br>
+<br>
+<b class="snp-head2">Founded</b><br>
+1983. We celebrate our<br>30th anniversary in 2013.<br>
+<br>
+<a href="http://www.maximintegrated.com/company/profile.cfm">Detailed Profile</a><br>
+<a href="http://www.maximintegrated.com/company/pdfs/corporate_infographic.pdf">Corporate Infographic</a> (PDF)<br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+<nobr>
+<b class="snp-head2">NASDAQ</b><br>
+MXIM<br>
+<br>
+<b class="snp-head2">Employees</b><br>
+9300<br>
+</nobr>
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-footer">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b>Related:</b> <a href="/company/careers/career-opportunities/">Career Opportunities</a>
+    </nobr></td>
+    <td class="snp"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="https://support.maximintegrated.com/contact_us/other_issues.mvp">Didn't Find What You Need?</a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+</div><!-- end slide text -->
+
+
+<!-- =========================================================== -->
+
+<div id="snp-router-s7p1" class="snp-router-image-panel" style="display:none;"></div>
+<div id="snp-router-s7p2" class="snp-router-text-panel"  style="display:none;">
+
+<div class="snp-slide-header">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td class="snp" align="left" width="1%"><nobr>
+    <b><a href="https://my.maximintegrated.com/">My Maxim Home</a></b>
+    </nobr></td>
+    <td class="snp" onClick="navpad.drawer_close();" style="cursor: pointer;"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="/" onClick="navpad.drawer_close();return(false);"><img border="0" width="15" height="10" src="/maxkit/images/arrow-up-100.png"></a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-body">
+<table class="default" cellpadding="0" cellspacing="0" width="40%">
+<tr valign="top">
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="20%">
+<nobr>
+<!-- <b>My Stuff</b><br> -->
+<a href="https://my.maximintegrated.com/">My Home</a><br>
+<a href="https://my.maximintegrated.com/identity/index.mvp">Identity</a><br>
+<a href="https://my.maximintegrated.com/mailbox/index.mvp">MailBox</a><br>
+<a href="https://my.maximintegrated.com/subscriptions/index.mvp">Subscriptions</a><br>
+<a href="https://my.maximintegrated.com/interests/index.mvp">Interests</a><br>
+<a href="https://my.maximintegrated.com/footprints/index.mvp">Footprints</a><br>
+<!--
+<a href="https://memcenter.maximintegrated.com/home/logout_quick.mvp?return_url=http://www.maximintegrated.com/">Logout</a><br>
+-->
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+
+<!-- COLUMN =========== -->
+<td class="snp-col-s02" width="20%">
+<nobr>
+<b class="snp-head1">Shopping</b><br>
+<a href="http://www.maximintegrated.com/samples/">Free Samples</a><br>
+<a href="https://shop.maximintegrated.com/">Buy Online</a><br>
+<a href="https://shop.maximintegrated.com/storefront/myorder.do?event=Myorders&menuitem=MyOrder">Order Status</a><br>
+</nobr>
+</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+
+</tr>
+</table>
+
+</div>
+
+<div class="snp-slide-footer">
+<table class="default" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+    <td class="snp" align="left" width="1%"><nobr>
+    <!-- <b>Related:</b> -->
+    </nobr></td>
+    <td class="snp"><br></td>
+    <td class="snp" align="right" width="1%"><nobr>
+    <a href="https://support.maximintegrated.com/member_center/other_comments.mvp">Didn't Find What You Need?</a>
+    </nobr></td>
+</tr>
+</table>
+
+</div>
+
+</div><!-- end slide text -->
+
+</div><!-- /router -->
+</div><!-- /body -->
+</div><!-- /frame -->
+</div><!-- /drawer -->
+<!-- END: SITE NAVPAD (snp) -->
+
+<!-- ======================================= -->
+
+<script type="text/javascript">
+var navpad_static = 1;
+var navpad = 0;
+if (typeof(MaxFire_Navpad_Manager) == "function") {
+    navpad = new MaxFire_Navpad_Manager();
+}
+if (navpad && navpad_static) {
+    navpad.prep_slides();
+}
+
+function open_navpad(sname)
+{
+    // If there is no navpad, just use the plain navbar.
+    if (! navpad) { return (click_navbar(sname)); }
+    if (! snp_active) { return (click_navbar(sname)); }
+
+    // Disable the navpad for certain older browsers.
+    if (Agent && Agent.is_msie6_relic()) { return (click_navbar(sname)); }
+
+    // If the navpad is already initd, just switch to the tab.
+    if (navpad.good2go) { navpad.click_tab(sname); return (false); }
+
+    // Init various navpad values.
+    navpad.sname = sname;
+    navpad.section = 'base.mvp';
+
+    // Load the navpad content.
+    navpad.load_base("prep_navpad");
+}
+function prep_navpad(wrapper)
+{
+    // If no data provided on callback, punt.
+    if (! wrapper) { return (click_navbar()); }
+    if (! wrapper.mdata) { return (click_navbar()); }
+    if (! wrapper.success) { return (click_navbar()); }
+
+    // If the target element is not there, punt.
+    var router_elem = navpad.router_elem;
+    if (! router_elem) { return (click_navbar()); }
+
+    // Put the dynamic navpad content in place.
+    router_elem.innerHTML = wrapper.mdata.base_content;
+
+    // Now that we have content, prep the navpad.
+    navpad.prep_slides();
+    navpad.click_tab(navpad.sname);
+    navpad.secmap[navpad.section] = 1;
+
+    // Make sure it worked.
+    var looks_good = 1; // TBD (bgcolor non-white)
+    if (! looks_good) { return (click_navbar()); }
+    return (true);
+}
+
+function view_section(sname, stitle, file_name)
+{
+    // If the section is already initd, take the easy way out.
+    /*-----
+    NOTE: Ajax.url contains the full blown queried url.
+    if (navpad.section[file_name]) {
+	// snp-router-s1p1
+	// snp-router-s1p2 <stuff>
+	var slide_elem = navpad.slide_elem(navpad.sname + 'p2');
+    }
+    -----*/
+
+    // Load the navpad content.
+    //if (Mary[1] != 1) { return (false); }
+    navpad.load_section("view_section_handler", file_name, { });
+    navpad.stitle = stitle;
+}
+function view_section_handler(wrapper)
+{
+    // If no data provided on callback, punt.
+    if (! wrapper) { return (click_error("no wrapper")); }
+    if (! wrapper.mdata) { return (click_error("no mdata")); }
+    if (! wrapper.success) { return (click_error("no success")); }
+
+    // Get the current slide element panel.
+    var eid = "snp-" + navpad.stitle + "-body";
+    var elem = dyna.elem(eid);
+    if (! elem) { return (click_error("no body elem: " + eid)); }
+
+    // Put the dynamic navpad content in place.
+    elem.innerHTML = wrapper.mdata.slide_content;
+
+    // Answer back.
+    return (true);
+}
+
+function click_navbar(sname)
+{
+    if (! sname) { sname = navpad.sname; }
+    var eid = 'snb-' + sname + '-link';
+    var link = document.getElementById(eid);
+    if (! link) { alert("ERROR: link not found: " + eid); return (false); }
+    if (! link.href) { alert("ERROR: bad link: " + eid); return (false); }
+    window.location = link.href;
+    return (false);
+}
+function click_error(msg)
+{
+    alert("ERROR: " + msg);
+    return (false);
+}
+</script>
+
+<!-- ================================================================== -->
+<!-- END: SITE HEADER -->
+<!-- ================================================================== -->
+
+
+
+
+
+<style>
+#viewing-area-cell { padding-left: 0px; }
+#viewing-area      { padding-left: 0px; }
+</style>
+
+<div id="core-shell" align="center">
+<div id="core-edge1"></div>
+<!-- 10px gutter -->
+<!-- <table id="core-table1" border="0" cellpadding="0" cellspacing="0" width="980"> -->
+<!-- 25px gutter -->
+<table id="core-table1" border="0" cellpadding="0" cellspacing="0" width="1010">
+<tr valign="top">
+<td id="core-content-cell"><!-- gutter padding placed here in css -->
+
+
+<!-- ================================= -->
+<div id="core-content">
+
+<div id="alpha-nav">
+
+<!-- BREAD CRUMBS -->
+<span class=breadcrumbs><nobr><a class=crumb href="http://www.maximintegrated.com/">Maxim</a> &gt; <a class=crumb href="http://www.maximintegrated.com/design/">Design Support</a> &gt; <a class=crumb href="http://www.maximintegrated.com/design/techdocs/">Technical Documents</a> &gt; <a class=crumb href="/design/techdocs/tutorials/index.mvp">Tutorials</a> &gt; <a class=crumb href="/design/techdocs/tutorials/index.mvp/id/42/c/Basestations-Wireless%20Infrastructure#c42">Basestations/Wireless Infrastructure</a> &gt; APP 2875</nobr></span><br><!-- BREAD CRUMBS -->
+<span class=breadcrumbs><nobr><a class=crumb href="http://www.maximintegrated.com/">Maxim</a> &gt; <a class=crumb href="http://www.maximintegrated.com/design/">Design Support</a> &gt; <a class=crumb href="http://www.maximintegrated.com/design/techdocs/">Technical Documents</a> &gt; <a class=crumb href="/design/techdocs/tutorials/index.mvp">Tutorials</a> &gt; <a class=crumb href="/design/techdocs/tutorials/index.mvp/id/38/c/Wireless%20and%20RF#c38">Wireless and RF</a> &gt; APP 2875</nobr></span><br>
+</div>
+
+<table id="core-table2" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="top">
+<td id="viewing-area-cell">
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: VIEWING AREA -->
+<!-- ======================================================================= -->
+
+
+<div id="viewing-area">
+
+
+
+<script type="text/javascript" src="/app-notes/sys/js/max_tooltip.js"></script>
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: CONTENT -->
+<!-- ======================================================================= -->
+
+	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr><td width="800">
+
+	
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: INFO HEADER -->
+<!-- ======================================================================= -->
+
+
+
+
+
+<tr valign="top" bgcolor="#f0f0f0">
+<td class="breadcrumbs">
+Keywords: <span style="color:#666666;">rf,rfic,wireless,noisefigure measurement,gain,meter,y factor, rf ics, rfics</span>
+	<br><a href="#rp">Related Parts</a>
+</td>
+</tr>
+</table>
+
+
+<!-- ======================================================================= -->
+<!-- END: INFO HEADER -->
+<!-- ======================================================================= -->
+
+
+
+
+	</td>
+	<td>&nbsp;</td>
+	<tr><td width="800" style="padding-right: 20px;">
+
+
+<img src="/images/clear.gif" width="1" height="10"><br clear=all>
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: KINDLE_CONTENT -->
+<!-- ======================================================================= -->
+
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: TYPE,TITLE,AUTHOR -->
+<!-- ======================================================================= -->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td>
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td class="grayb5" nowrap>
+	TUTORIAL 2875
+	</td>
+	<td class="grayb5" nowrap>
+
+
+
+
+
+
+
+
+
+
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+<tr>
+<td>
+<h1>Three Methods of Noise Figure Measurement</h1>
+	
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tr><td class="grayb5">Nov 21, 2003</td></tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+
+<!-- ======================================================================= -->
+<!-- END: TYPE,TITLE,AUTHOR -->
+<!-- ======================================================================= -->
+
+
+
+
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: WIRELESS NAV -->
+<!-- ======================================================================= -->
+
+
+
+<!-- ======================================================================= -->
+<!-- END: WIRELESS NAV -->
+<!-- ======================================================================= -->
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- ABSTRACT -->
+<!-- ======================================================================= -->
+
+	<i>Abstract:&nbsp;Three different methods to measure noise figure are presented: Gain method, Y-factor method, and the Noise Figure Meter method. The three approaches are compared in a table.</i>
+	<br><br clear=all>
+
+
+	<table border="0" cellspacing="0" cellpadding="0" align="right" cellpadding="0">
+	<tr><td>
+	
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: BANNER AD -->
+<!-- ======================================================================= -->
+
+
+<table border="0" cellpadding="10" cellspacing="0" width="200"><tr><td><a href='/app-notes/index.mvp/id/4651'><img src='/images/banners/en/wireless-webinar.jpg' width=200 height=100 border=0 alt='Click here for an overview of the wireless components used in a typical radio transceiver.'><br><span class='small'>Click here for an overview of the wireless components used in a typical radio transceiver.</a><br></span></td></tr></table>
+<!-- ======================================================================= -->
+<!-- END: BANNER AD -->
+<!-- ======================================================================= -->
+
+
+
+	</td></tr>
+	</table>
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- CONTENT: DB HTML -->
+<!-- ======================================================================= -->
+
+	<h2>Introduction</h2>
+In <a class='muted2' href='/glossary/definitions.mvp/term/Wireless/gpk/338' onmouseover="MaximGlossaryTip(338);" onmouseout="MaximGlossaryUnTip();">wireless</a> communication systems, the "Noise Figure (NF)," or the related "Noise Factor (F)," defines the noise performance and contributes to the <a class='muted2' href='/glossary/definitions.mvp/term/Receiver/gpk/1068' onmouseover="MaximGlossaryTip(1068);" onmouseout="MaximGlossaryUnTip();">receiver</a> sensitivity. This application note describes this important parameter and details ways to measure it.<br><br>
+
+<h2>Noise Figure and Noise Factor</h2>
+Noise Figure (NF) is sometimes referred to as Noise Factor (F). The relationship is simply:<br><br>
+
+NF = 10 * log10 (F)<br><br>
+
+<h2>Definition</h2>
+Noise Figure (Noise Factor) contains the important information about the noise performance of a RF system. The basic definition is:<br><br>
+
+<img src="/images/appnotes/2875/2875Eq01.gif" alt="Equation 1."><br><br>
+
+From this definition, many other popular equations of the Noise Figure (Noise Factor) can be derived.<br><br>
+
+<b>Below is a table of typical RF system Noise Figures:</b>
+<table border="0" cellspacing="1" cellpadding="2">
+ <tr class="tablehead">
+   <td class="tablehead">Category</td>
+   <td class="tablehead">MAXIM Products</td>
+   <td class="tablehead">Noise Figure*</td>
+   <td class="tablehead">Applications</td>
+   <td class="tablehead">Operating Frequency</td>
+   <td class="tablehead">System Gain</td>
+ </tr>
+ <tr class="tablebody">
+   <td>LNA</td>
+   <td>MAX2640</td>
+   <td>0.9dB</td>
+   <td>Cellular, ISM</td>
+   <td>400MHz ~ 1500MHz</td>
+   <td>15.1dB</td>
+ </tr>
+ <tr class="tablebodyalt">
+   <td rowspan="2">LNA</td>
+   <td rowspan="2">MAX2645</td>
+   <td>HG: 2.3dB</td>
+   <td>WLL</td>
+   <td>3.4GHz ~ 3.8GHz</td>
+   <td>HG: 14.4dB</td>
+ </tr>
+ <tr class="tablebodyalt">
+   <td>LG: 15.5dB</td>
+   <td>WLL</td>
+   <td>3.4GHz ~ 3.8GHz</td>
+   <td>LG: -9.7dB</td>
+ </tr>
+ <tr class="tablebody">
+   <td>Mixer</td>
+   <td>MAX2684</td>
+   <td>13.6dB</td>
+   <td>LMDS, WLL</td>
+   <td>3.4GHz ~ 3.8GHz</td>
+   <td>1dB</td>
+ </tr>
+  <tr class="tablebodyalt">
+    <td>Mixer</td>
+    <td>MAX9982</td>
+    <td>12dB</td>
+    <td>Cellular, GSM</td>
+    <td>825MHz ~ 915MHz</td>
+    <td>2.0dB</td>
+  </tr>
+  <tr class="tablebody">
+    <td>Receiver System</td>
+    <td>MAX2700</td>
+    <td>3.5dB ~ 19dB</td>
+    <td>PCS, WLL</td>
+    <td>1.8GHz ~ 2.5GHz</td>
+    <td>&lt; 80dB</td>
+ </tr>
+</table><br>
+
+* HG = High <a class='muted2' href='/glossary/definitions.mvp/term/Gain/gpk/1059' onmouseover="MaximGlossaryTip(1059);" onmouseout="MaximGlossaryUnTip();">Gain</a> Mode, LG = Low Gain Mode<br><br>
+
+Measurement methods vary for different applications. As shown in the table above, some applications have high gain and low noise figure (Low Noise Amplifiers under HG mode), some have low gain and high noise figure (mixers and LNAs under LG mode), some have very high gain and wide range of noise figure (receiver systems). Measurement methods have to be chosen carefully. In this article, a Noise Figure Meter as well as two other popular methods - "gain method" and "Y factor method" - will be discussed.<br><br>
+
+<h2>Using a Noise Figure Meter</h2>
+Noise Figure Meter/Analyzer is employed as shown in <b>Figure 1</b>.<br><br>
+
+<img src="/images/appnotes/2875/2875Fig01.gif" alt="Figure 1."><br>
+<i>Figure 1.</i><br><br>
+
+The noise figure meter, such as Agilent N8973A Noise Figure Analyzer, generates a 28VDC pulse signal to drive a noise <a class='muted2' href='/glossary/definitions.mvp/term/Source/gpk/1079' onmouseover="MaximGlossaryTip(1079);" onmouseout="MaximGlossaryUnTip();">source</a> (HP346A/B), which generates noise to drive the device under test (DUT). The output of the DUT is then measured by the noise figure analyzer. Since the input noise and <a class='muted2' href='/glossary/definitions.mvp/term/Signal-to-Noise-Ratio/gpk/278' onmouseover="MaximGlossaryTip(278);" onmouseout="MaximGlossaryUnTip();">Signal-to-Noise ratio</a> of the noise source is known to the analyzer, the noise figure of the DUT can be calculated internally and displayed. For certain applications (mixers and receivers), a LO signal might be needed, as shown in Figure 1. Also, certain parameters need to be set up in the Noise Figure Meter before the measurement, such as frequency range, application (Amplifier/Mixer), etc.<br><br>
+
+Using a noise figure meter is the most straightforward way to measure noise figure. In most cases it is also the most accurate. An engineer can measure the noise figure over a certain frequency range, and the analyzer can display the system gain together with the noise figure to help the measurement.  A noise figure meter also has limitations. The analyzers have certain frequency limits. For example, the Agilent N8973A works from 10MHz to 3GHz. Also, when measuring high noise figures, e.g., noise figure exceeding 10dB, the result can be very inaccurate. This method requires very expensive equipment.<br><br>
+
+<h2>Gain Method</h2>
+As mentioned above, there are other methods to measure noise figure besides directly using a noise figure meter. These methods involve more measurements as well as calculations, but under certain conditions, they turn out to be more convenient and more accurate. One popular method is called "Gain Method", which is based on the noise factor definition given earlier:<br><br>
+
+<img src="/images/appnotes/2875/2875Eq02.gif" alt="Equation 2."><br><br>
+
+In this definition, "Noise" is due to two effects. One is the interference that comes to the input of a RF system in the form of signals that differ from the desired one. The second is due to the random fluctuation of carriers in the RF system (<a class='muted2' href='/glossary/definitions.mvp/term/LNA/gpk/203' onmouseover="MaximGlossaryTip(203);" onmouseout="MaximGlossaryUnTip();">LNA</a>, mixer, receiver, etc). The second effect is a result of Brownian motion, It applies in thermal equilibrium to any electronic device, and the available noise power from the device is:<br><br>
+
+P<sub>NA</sub> = kT&#916;F,<br><br>
+
+Where   k = Boltzmann's Constant (1.38 * 10<sup>-23</sup> Joules/&#916;K),<br><br>
+
+T = <a class='muted2' href='/glossary/definitions.mvp/term/Temperature/gpk/844' onmouseover="MaximGlossaryTip(844);" onmouseout="MaximGlossaryUnTip();">Temperature</a> in Kelvin,<br>
+&#916;F = Noise <a class='muted2' href='/glossary/definitions.mvp/term/Bandwidth/gpk/386' onmouseover="MaximGlossaryTip(386);" onmouseout="MaximGlossaryUnTip();">Bandwidth</a> (Hz).<br><br>
+
+At room temperature (290&#916;K), the noise power density P<sub>NAD</sub> = -174dBm/Hz.<br><br>
+
+Thus we have the following equation:<br><br>
+NF = P<sub>NOUT</sub> - (-174dBm/Hz + 10 * log<sub>10</sub>(BW) + Gain)<br><br>
+
+In the equation, P<sub>NOUT</sub> is the measured total output noise power. -174dBm/Hz is the noise density of 290&deg;K ambient noise. BW is the bandwidth of the frequency range of interest. Gain is the system gain. NF is the noise figure of the DUT. Everything in the equation is in log scale. To make the formula simpler, we can directly measure the output noise power density (in dBm/Hz), and the equation becomes:<br><br>
+
+NF = P<sub>NOUTD</sub> + 174dBm/Hz - Gain<br><br>
+
+To use the "Gain Method" to measure the noise figure, the gain of the DUT needs to be pre-determined. Then the input of the DUT is terminated with the characteristic <a class='muted2' href='/glossary/definitions.mvp/term/Impedance/gpk/1022' onmouseover="MaximGlossaryTip(1022);" onmouseout="MaximGlossaryUnTip();">impedance</a> (50&#937; for most RF applications, 75&#937; for video/cable applications). Then the output noise power density is measured with a spectrum analyzer.<br><br>
+
+The setup for Gain Method is shown in <b>Figure 2</b>.<br><br>
+
+<img src="/images/appnotes/2875/2875Fig02.gif" alt="Figure 2."><br>
+<i>Figure 2.</i><br><br>
+
+As an example, we measure the noise figure of the MAX2700. At a specified  LNA gain setting and V<sub>AGC</sub>, the gain is measured to be 80dB. Then, set up the device as show above, and terminate the RF input with a 50&#937; termination. We read the output noise density to be -90dBm/Hz. To get a stable and accurate reading of the noise density, the optimum ratio of RBW (resolution bandwidth) and VBW (video bandwidth) is RBW/VBW = 0.3. Thus we can calculate the NF to be: <br><br>
+
+-90dBm/Hz + 174dBm/Hz - 80dB = 4.0dB.<br><br>
+
+The "Gain Method" can cover any frequency range, as long as the spectrum analyzer permits. The biggest limitation comes from the noise floor of the spectrum analyzer. As shown in the equations, when Noise Figure is low (sub 10dB), (P<sub>OUTD</sub> - Gain) is close to -170dBm/Hz. Normal LNA gain is about 20dB. In that case, we need to measure a noise power density of -150dBm/Hz, which is lower than the noise floor of most spectrum analyzers. In our example, the system gain is very high, thus most spectrum analyzers can accurately measure the noise figure. Similarly, if the Noise Figure of the DUT is very high (e.g., over 30dB), this method can also be very accurate.<br><br>
+
+<h2>Y Factor Method</h2>
+Y Factor method is another popular way to measure Noise Figure. To use the Y factor method, an ENR (Excess Noise Ratio) source is needed. It is the same thing as the noise source we mentioned earlier in the "Noise Figure Meter" section. The setup is shown in the <b>Figure 3</b>:<br><br>
+
+<img src="/images/appnotes/2875/2875Fig03.gif" alt="Figure 3."><br>
+<i>Figure 3.</i><br><br>
+
+The ENR head usually requires a high DC <a class='muted2' href='/glossary/definitions.mvp/term/Volt/gpk/801' onmouseover="MaximGlossaryTip(801);" onmouseout="MaximGlossaryUnTip();">voltage</a> supply. For example, HP346A/B noise sources need 28VDC. Those ENR heads works are a very wide band (e.g.10MHz to 18GHz for the HP346A/B) and they have a standard noise figure parameter of their own at specified frequencies. An example table is given below. The noise figures at frequencies between those markers are extrapolated.<br><br>
+
+<b>Table 1. Example of ENR of Noise Heads</b>
+<table border="0" cellspacing="1" cellpadding="2">
+ <tr class="tablehead">
+   <td class="tablehead"></td>
+   <td class="tablehead">HP346A</td>
+   <td class="tablehead">HP346B</td>
+ </tr>
+ <tr class="tablebody">
+   <td class="tablehead">Frequency (Hz)</td>
+   <td>NF (dB)</td>
+   <td>NF (dB)</td>
+ </tr>
+ <tr class="tablebodyalt">
+   <td>1G</td>
+   <td>5.39</td>
+   <td>15.05</td>
+ </tr>
+ <tr class="tablebodyalt">
+   <td>2G</td>
+   <td>5.28</td>
+   <td>15.01</td>
+ </tr>
+ <tr class="tablebody">
+   <td>3G</td>
+   <td>5.11</td>
+   <td>14.86</td>
+ </tr>
+  <tr class="tablebodyalt">
+    <td>4G</td>
+    <td>5.07</td>
+    <td>14.82</td>
+  </tr>
+  <tr class="tablebody">
+    <td>5G</td>
+    <td>5.07</td>
+    <td>14.81</td>
+ </tr>
+</table><br>
+
+Turning the noise source on and off (by turning on and off the DC voltage), an engineer measures the change in the output noise power density with a spectrum analyzer. The formula to calculate noise figure is: <br><br>
+
+<img src="/images/appnotes/2875/2875Eq03.gif" alt="Equation 3."><br><br>
+
+In which ENR is the number given in the table above. It is normally listed on the ENR heads. Y is the difference between the output noise power density when the noise source is on and off.<br><br>
+
+The equation comes from the following:<br>
+An ENR noise head provides a noise source at two "noise temperatures": a hot T = TH (when a DC voltage is applied) and a cold T = 290&deg;K. The definition of ENR of the noise head is:<br><br>
+
+<img src="/images/appnotes/2875/2875Eq04.gif" alt="Equation 4."><br><br>
+
+The excess noise is achieved by biasing a noisy <a class='muted2' href='/glossary/definitions.mvp/term/Diode/gpk/1053' onmouseover="MaximGlossaryTip(1053);" onmouseout="MaximGlossaryUnTip();">diode</a>. Now consider the ratio of power out from the <a class='muted2' href='/glossary/definitions.mvp/term/Amplifier/gpk/1056' onmouseover="MaximGlossaryTip(1056);" onmouseout="MaximGlossaryUnTip();">amplifier</a> (DUT) from applying the cold T = 290&deg;K, followed by applying the hot T = T<sub>H</sub> as inputs:<br><br>
+
+Y = G(Th + Tn)/G(290 + Tn) = (Th/290 + Tn/290)/(1 + Tn/290).<br><br> 
+
+This is the Y factor, from which this method gets its name.<br><br>
+
+In terms of Noise figure, F = Tn/290+1, F is the noise factor (NF = 10 * log(F))Thus, Y = ENR/F+1. In this equation, everything is in <a class='muted2' href='/glossary/definitions.mvp/term/Linear/gpk/862' onmouseover="MaximGlossaryTip(862);" onmouseout="MaximGlossaryUnTip();">linear</a> regime, from this we can get the equation above.<br><br>
+
+Again, let's use MAX2700 as an example of how to measure noise figure with the Y-factor method. The set up is show above in Figure 3. Connect a HP346A ENR noise head to the RF input. Connect a 28V DC supply voltage to the noise head. We can monitor the output noise density on a spectrum analyzer. By Turning off then turning on the DC power supply, the noise density increased from -90dBm/Hz to -87dBm/Hz. So Y = 3dB. Again to get a stable and accurate reading of the noise density, RBW/VBW is set to 0.3. From Table 1, at 2GHz, we get ENR = 5.28dB. Thus we can calculate the NF to be 5.3dB.<br><br>
+
+<h2>Summary</h2>
+In this article, three methods to measure the noise figure of RF devices are discussed. They each have advantages and disadvantages and each is suitable for certain applications. Below is a summary table of the pros and cons. Theoretically, the measurement results of the same RF device should be identical, but due to limitations of RF equipment (availability, accuracy, frequency range, noise floor, etc), we have to carefully choose the best method to get the correct results.<br><br>
+
+<table border="0" cellspacing="1" cellpadding="2">
+ <tr class="tablehead">
+   <td class="tablehead"></td>
+   <td class="tablehead">Suitable Applications</td>
+   <td class="tablehead">Advantage</td>
+   <td class="tablehead">Disadvantage</td>
+ </tr>
+ <tr class="tablebody">
+   <td class="tablehead">Noise Figure Meter</td>
+   <td>Super low NF</td>
+   <td>Convenient, very accurate when measuring super low (0-2dB) NF.</td>
+   <td>Expensive equipment, frequency range limited</td>
+ </tr>
+ <tr class="tablebodyalt">
+   <td class="tablehead">Gain Method</td>
+   <td>Very high Gain or very high NF</td>
+   <td>Easy setup, very accurate at measuring very high NF, suitable for any frequency range</td>
+   <td>Limited by Spectrum Analyzer noise floor. Can't deal with systems with low gain and low NF.</td>
+ </tr>
+ <tr class="tablebodyalt">
+   <td class="tablehead">Y Factor Method</td>
+   <td>Wide range of NF</td>
+   <td>Can measure wide range of NF at any frequency regardless of gain </td>
+   <td>When measuring Very high NF, error could be large.</td>
+ </tr>
+</table>
+	<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a name=rp></a>
+<!-- ======================================================================= -->
+<!-- BEGIN: RELATED PARTS -->
+<!-- ======================================================================= -->
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td class=tablehead2 colspan="3">Related Parts</td></tr>
+
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/1758">MAX2105</a></td>
+		<td class=tablebody2 valign=top width='60%'>Direct-Conversion Tuner ICs for Digital DBS Applications</td>
+		<td class=tablebody2 valign=top>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/1918">MAX2640</a></td>
+		<td class=tablebody2 valign=top width='60%'>300MHz to 2500MHz SiGe Ultra-Low-Noise Amplifiers</td>
+		<td class=tablebody2 valign=top>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/1918">MAX2641</a></td>
+		<td class=tablebody2 valign=top width='60%'>300MHz to 2500MHz SiGe Ultra-Low-Noise Amplifiers</td>
+		<td class=tablebody2 valign=top>
+			<a href="https://shop.maximintegrated.com/storefront/searchsample.do?event=Sample&menuitem=Sample&Partnumber=MAX2641">Free Samples</a>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2224">MAX2642</a></td>
+		<td class=tablebody2 valign=top width='60%'>900MHz SiGe, High-Variable IP3, Low-Noise Amplifier</td>
+		<td class=tablebody2 valign=top>
+			<a href="https://shop.maximintegrated.com/storefront/searchsample.do?event=Sample&menuitem=Sample&Partnumber=MAX2642">Free Samples</a>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2224">MAX2643</a></td>
+		<td class=tablebody2 valign=top width='60%'>900MHz SiGe, High-Variable IP3, Low-Noise Amplifier</td>
+		<td class=tablebody2 valign=top>
+			<a href="https://shop.maximintegrated.com/storefront/searchsample.do?event=Sample&menuitem=Sample&Partnumber=MAX2643">Free Samples</a>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2316">MAX2645</a></td>
+		<td class=tablebody2 valign=top width='60%'>3.4GHz to 3.8GHz SiGe Low-Noise Amplifier/PA Predriver</td>
+		<td class=tablebody2 valign=top>
+			<a href="https://shop.maximintegrated.com/storefront/searchsample.do?event=Sample&menuitem=Sample&Partnumber=MAX2645">Free Samples</a>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2461">MAX2648</a></td>
+		<td class=tablebody2 valign=top width='60%'>5GHz to 6GHz Low-Noise Amplifier in 6-Pin UCSP</td>
+		<td class=tablebody2 valign=top>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/3520">MAX2649</a></td>
+		<td class=tablebody2 valign=top width='60%'>5GHz Low-Noise Amplifier with Shutdown</td>
+		<td class=tablebody2 valign=top>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2462">MAX2654</a></td>
+		<td class=tablebody2 valign=top width='60%'>1575MHz/1900MHz Variable-IP3 Low-Noise Amplifiers</td>
+		<td class=tablebody2 valign=top>
+			<a href="https://shop.maximintegrated.com/storefront/searchsample.do?event=Sample&menuitem=Sample&Partnumber=MAX2654">Free Samples</a>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2462">MAX2655</a></td>
+		<td class=tablebody2 valign=top width='60%'>1575MHz/1900MHz Variable-IP3 Low-Noise Amplifiers</td>
+		<td class=tablebody2 valign=top>
+			<a href="https://shop.maximintegrated.com/storefront/searchsample.do?event=Sample&menuitem=Sample&Partnumber=MAX2655">Free Samples</a>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2462">MAX2656</a></td>
+		<td class=tablebody2 valign=top width='60%'>1575MHz/1900MHz Variable-IP3 Low-Noise Amplifiers</td>
+		<td class=tablebody2 valign=top>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2192">MAX2684</a></td>
+		<td class=tablebody2 valign=top width='60%'>3.5GHz Downconverter Mixers with Selectable LO Doubler</td>
+		<td class=tablebody2 valign=top>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/2238">MAX2700</a></td>
+		<td class=tablebody2 valign=top width='60%'>1.8GHz to 2.5GHz, Direct-Downconversion Receivers</td>
+		<td class=tablebody2 valign=top>
+		&nbsp;
+		</td>
+		</tr>
+		<tr>
+		<td class=tablebody2 valign=top><a href="/datasheet/index.mvp/id/3530">MAX9982</a></td>
+		<td class=tablebody2 valign=top width='60%'>825MHz to 915MHz, SiGe High-Linearity Active Mixer</td>
+		<td class=tablebody2 valign=top>
+			<a href="https://shop.maximintegrated.com/storefront/searchsample.do?event=Sample&menuitem=Sample&Partnumber=MAX9982">Free Samples</a>
+		&nbsp;
+		</td>
+		</tr>
+
+	</table>
+	<br><br>
+
+<!-- ======================================================================= -->
+<!-- END: RELATED PARTS -->
+<!-- ======================================================================= -->
+
+
+
+
+<!-- ======================================================================= -->
+<!-- END: KINDLE_CONTENT -->
+<!-- ======================================================================= -->
+
+
+<!-- ======================================================================= -->
+<!-- EE-MAIL -->
+<!-- ======================================================================= -->
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: NEXT STEP LINKS -->
+<!-- ======================================================================= -->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td class="tablehead2" colspan="2">Next Steps</td></tr>
+<tr>
+	<td class="tablebody2">
+		EE-Mail
+	</td>
+	<td class="tablebody2">
+		<a href="https://my.maximintegrated.com/en/subscriptions/ee_mail/index.mvp">Subscribe to EE-Mail</a> and receive automatic notice of new documents in your areas of interest.
+	</td>
+</tr>
+	<tr>
+		<td class="tablebody2">
+			Download
+		</td>
+	
+		<td class="tablebody2">
+			<a href="http://pdfserv.maximintegrated.com/en/an/AN2875.pdf" >Download, PDF Format</a>&nbsp;(74kB)
+		&nbsp;</td>
+	</tr>
+<tr>
+	<td class="tablebody2">
+		Share
+	</td>
+
+	<td class="tablebody2">
+		<div class="addthis_toolbox addthis_default_style">
+		<a class="addthis_button_google_plusone" g:plusone:size="medium" g:plusone:count="false"></a>
+		<a class="addthis_button_tweet" tw:count="none"></a>
+		<a class="addthis_button_facebook_like"></a>
+		<a class="addthis_button_compact">Other Channels</a>
+		<a class="addthis_button_email">&nbsp;Email</a> this page to an associate or friend.&nbsp;
+		</div>
+	</td>
+</tr>
+</table>
+<br>
+
+<!-- ======================================================================= -->
+<!-- END: NEXT STEP LINKS -->
+<!-- ======================================================================= -->
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- PDF_LINK -->
+<!-- ======================================================================= -->
+
+	<br><br>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td colspan=3 align="left">
+
+APP 2875:	Nov 21, 2003
+	<br>
+
+	
+
+
+
+<font color="#666666">
+TUTORIAL 2875,
+AN2875,
+AN 2875,
+APP2875,
+Appnote2875,
+Appnote 2875</font>
+
+
+
+	</td></tr>
+	</table>
+
+	</td><td valign="top">
+	
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: RIGHT NAV -->
+<!-- ======================================================================= -->
+
+
+<table border="0" cellspacing="0" cellpadding="0"><tr>
+<td style="border-left: 1px dotted #A6A8AB; padding: 0px 0px 0px 16px;">
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: SOCIAL MEDIA -->
+<!-- ======================================================================= -->
+
+
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+
+<h3>Share</h3>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr align="left">
+<td nowrap="nowrap">
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+  <p><a class="addthis_button_facebook_like"></a><br>
+  <p><a class="addthis_button_tweet" tw:count="none"></a><br>
+  <p><a class="addthis_button_pinterest_pinit"></a><br>
+  <p><a class="addthis_button_google_plusone" g:plusone:size="medium" g:plusone:count="false"></a><br>
+  <p><a class="addthis_button_email">&nbsp;Email</a><br>
+  <p><a class="addthis_button_compact">Other Channels</a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=maximic"></script>
+<!-- AddThis Button END -->
+
+</td>
+</tr>
+</table>
+
+<!-- ======================================================================= -->
+<!-- END: SOCIAL MEDIA -->
+<!-- ======================================================================= -->
+
+
+
+<br><br>
+
+
+
+
+
+<!-- ======================================================================= -->
+<!-- BEGIN: MORE LINKS -->
+<!-- ======================================================================= -->
+
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr align="left">
+<td nowrap="nowrap">
+
+<h3>More</h3>
+<br>
+
+	<div class="text8">
+	<a href="http://pdfserv.maximintegrated.com/en/an/AN2875.pdf" >Download, PDF Format</a>&nbsp;(74kB)
+	</div>
+
+
+
+
+
+
+	<div class="text8">
+	<a href="#rp">Related Parts/Samples</a>
+	</div>
+
+
+<div class="text8">
+<a href="https://my.maximintegrated.com/en/subscriptions/ee_mail/index.mvp">Sign-Up for EE-Mail&#8482;</a>
+</div>
+
+
+
+
+<div class="text8">
+<a href="javascript:window.print()">Print</a>
+</div>
+
+</td></tr>
+</table>
+
+<!-- ======================================================================= -->
+<!-- END: MORE LINKS -->
+<!-- ======================================================================= -->
+
+
+
+
+</td></tr>
+</table>
+
+<!-- ======================================================================= -->
+<!-- END: RIGHT NAV -->
+<!-- ======================================================================= -->
+
+
+
+	</td></tr></table>
+<!-- ======================================================================= -->
+<!-- END: CONTENT -->
+<!-- ======================================================================= -->
+
+
+
+
+
+
+
+
+
+</div><!-- /viewing-area -->
+
+
+
+</td>
+</tr>
+</table><!-- /core-table2 -->
+
+<div id="omega-nav"><br></div>
+
+</div><!-- /core-content -->
+<!-- ================================= -->
+
+
+</td><!-- /core-content-cell -->
+</tr>
+</table><!-- /core-table1 -->
+<div id="core-edge2"></div>
+</div><!-- /core-shell -->
+
+
+
+
+
+    <!-- FILE CACHE [23331] (SITE FOOTER): HIT -->
+<!-- ================================================================== -->
+<!-- BEGIN: SITE FOOTER -->
+<!-- ================================================================== -->
+
+<div id="site-footer" align="center">
+<div id="site-footer-edge1"></div>
+
+<!-- BEGIN: FOOTER CONTROL PANEL -->
+<div id="fcp-shell">
+<table id="fcp-table1" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr valign="middle">
+    <td id="fcp-box1" align="left" width="97%">
+    <div class="fcp-text"><nobr>&copy; 2013 Maxim Integrated</nobr></div>
+    </td>
+
+    <td id="fcp-box2" align="right" width="1%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+    <td id="fcp-box3" align="right" width="1%">
+    <div class="fcp-text"><nobr>
+    <a class="fcp" href="http://www.maximintegrated.com/contact/">Contact Us</a>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    <a class="fcp" href="http://www.maximintegrated.com/company/careers/career-opportunities/">Career Opportunities</a>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    <a class="fcp" href="http://www.maximintegrated.com/legal/privacy.cfm">Privacy Policy</a>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    <a class="fcp" href="http://www.maximintegrated.com/legal/">Legal Notices</a>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    <a class="fcp" href="https://vip.maximintegrated.com/distributor">Distributor Portal</a>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    Follow Us
+    </nobr></div>
+    </td>
+
+    <td id="fcp-box4" align="right" width="1%">
+    <nobr>
+    &nbsp;
+    <a class="fcp" href="http://www.maximintegrated.com/rss/feed.mvp"><img width="19" height="19" border="0" src="/maxkit/images/social/rss.jpg"></a>
+    <a class="fcp" href="http://www.facebook.com/Maxim.IC"><img width="19" height="19" border="0" src="/maxkit/images/social/facebook.jpg"></a>
+    <a class="fcp" href="http://twitter.com/maxim_ic"><img width="19" height="19" border="0" src="/maxkit/images/social/twitter.jpg"></a>
+    <a class="fcp" href="https://plus.google.com/114771594249322760325?prsrc=3"><img width="19" height="19" border="0" src="/maxkit/images/social/google.jpg"></a>
+    <a class="fcp" href="http://pinterest.com/maximintegrated/"><img width="19" height="19" border="0" src="/maxkit/images/social/pinterest.jpg"></a>
+    </nobr>
+    </td>
+</tr>
+</table>
+</div><!-- /fcp-shell -->
+<!-- END: FOOTER CONTROL PANEL -->
+
+<div id="site-footer-edge2"></div>
+</div><!-- /site-footer -->
+
+<!-- ================================================================== -->
+<!-- END: SITE FOOTER -->
+<!-- ================================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/js/ga_footer.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

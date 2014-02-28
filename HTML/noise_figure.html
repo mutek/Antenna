@@ -1,0 +1,295 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>RF Amplifiers Engineering Notes</title>
+<!--ZOOMSTOP-->
+<meta name="description" content="rf amplifiers engineering notes, rf amplifiers technical reference material">
+<meta name="keywords" content="Solid State  amplifier, Radio Frequency
+High power RF and  microwave amp, design,schematic, linear, wireless, Broadband, narrow band, wideband ">
+<meta http-equiv="Classification" content="rf amplifiers">
+<meta name="URL" content="http://www.empowerrf.com">
+<meta name="revisit-after" content="15 days">
+<link href="https://www.empowerrf.com/style.css" rel="stylesheet" type="text/css">
+<link rel="SHORTCUT ICON" href="http://www.empowerrf.com/favicon.ico">
+<script language="JavaScript" src="https://www.empowerrf.com/menu.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" onLoad="javascript:preloader();">
+
+<a name="top"></a>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr> 
+<td height="15" colspan="2" class="style1">&nbsp;</td>
+</tr>
+<tr>
+    <td rowspan="3" bgcolor="#000000" style="width: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td height="63" background="https://www.empowerrf.com/images/main/blend.gif">
+		<!--Logo-Row-->
+		<table cellpadding="0" cellspacing="0" border="0" ><tr>
+		<td><img src="https://www.empowerrf.com/images/main/microwave.jpg" width="140" height="63" border="0"></td>
+		<td><a href="http://www.empowerrf.com" title="RF Amplifier">
+		  <img src="https://www.empowerrf.com/images/main/logo.jpg" width="500" height="63" border="0" alt="Empower RF Home Page"></a></td>
+        <td background="https://www.empowerrf.com/images/main/logo-2.jpg" width="156" height="63" align="right">
+	  	  <img src="https://www.empowerrf.com/images/cart-q3.gif" width="28" height="16" align="absmiddle"> 
+	      <a href="http://www.empowerrf.com/ident/quote_cart.php"><u>Quote Cart</u></a> &nbsp;</td>
+<td width="70"><img src="https://www.empowerrf.com/images/login.gif" width="26" height="16" align="absmiddle"> 
+				<a href="https://www.empowerrf.com/ident/index.php"><u>Login</u></a></td>	
+		  
+		  <td width="80"><a href="http://www.empowerrf.com/search/"><img src="https://www.empowerrf.com/images/search.jpg" width="32" height="29" border="0" align="absmiddle"><u>Search</u></a></td>
+        </tr></table>
+	</td>
+</tr>
+
+<tr>
+    <td height="40" class="menu-border">
+      <!--Menu-row-->
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr>
+        <td class="nav-row" id="rf500" width="20%" colspan="2" onMouseOver="menu_over('rf500');" onMouseOut="menu_out('rf500');">
+        	<a href="http://www.empowerrf.com/products/rf_amplifier_500.php">Amplifiers up to 500 MHz</a></td>
+        <td class="nav-row" id="power1000" width="20%" colspan="2" onMouseOver="menu_over('power1000');" onMouseOut="menu_out('power1000');">
+        	<a href="http://www.empowerrf.com/products/power_amp_1000.php">Amplifiers up to 1000 MHz</a></td>
+        <td class="nav-row" id="microwave2500" width="20%" colspan="2" onMouseOver="menu_over('microwave2500');" onMouseOut="menu_out('microwave2500');">
+        	<a href="http://www.empowerrf.com/products/microwave_2500.php">Amplifiers up to 2500 MHz</a></td>
+        <td class="nav-row" id="broadband6000" width="20%" colspan="2" onMouseOver="menu_over('broadband6000');" onMouseOut="menu_out('broadband6000');">
+        	<a href="http://www.empowerrf.com/products/broadband_6000.php">Amplifiers up to 6000 MHz</a></td>
+        <td class="nav-row" id="customization" width="20%" colspan="2"  onMouseOver="menu_over('customization');" onMouseOut="menu_out('customization');">
+        	<a href="http://www.empowerrf.com/customization/">Qualified Customization</a></td>
+        </tr>
+<tr height="23"><td id='m500' class='submenu' style="border-right-width:0px" onMouseOver="sub_menu_over('m500')" onMouseOut="sub_menu_out('m500')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=modules500">Modules</a></td>
+<td id='s500' class='submenu' onMouseOver="sub_menu_over('s500')" onMouseOut="sub_menu_out('s500')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=systems500">Systems</a></td>
+<td id='m1000' class='submenu' style="border-right-width:0px" onMouseOver="sub_menu_over('m1000')" onMouseOut="sub_menu_out('m1000')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=modules1000">Modules</a></td>
+<td id='s1000' class='submenu' onMouseOver="sub_menu_over('s1000')" onMouseOut="sub_menu_out('s1000')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=systems1000">Systems</a></td>
+<td id='m2500' class='submenu' style="border-right-width:0px" onMouseOver="sub_menu_over('m2500')" onMouseOut="sub_menu_out('m2500')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=modules2500">Modules</a></td>
+<td id='s2500' class='submenu' onMouseOver="sub_menu_over('s2500')" onMouseOut="sub_menu_out('s2500')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=systems2500">Systems</a></td>
+<td id='m6000' class='submenu' style="border-right-width:0px" onMouseOver="sub_menu_over('m6000')" onMouseOut="sub_menu_out('m6000')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=modules6000">Modules</a></td>
+<td id='s6000' class='submenu' onMouseOver="sub_menu_over('s6000')" onMouseOut="sub_menu_out('s6000')" > <a href="http://www.empowerrf.com/products/browse-amplifiers-products.php?cat=systems6000">Systems</a></td>
+		
+        
+        <td colspan="2" id="cust" class="submenu" onMouseOver="sub_menu_over('cust')" onMouseOut="sub_menu_out('cust')">&nbsp;</td></tr>
+      </table>
+</td>
+</tr>
+
+<tr>
+<td>
+<!--Main Window table-->
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="1" valign="top" background="https://www.empowerrf.com/images/main/rf_bg.gif" style="width: 140px;"></td>
+<td rowspan="2" align="center" valign="top" style="padding: 10px;">
+<!--ZOOMRESTART-->
+<style type="text/css">
+<!--
+.panel-border {
+	border-top-width: 5px;
+	border-right-width: 8px;
+	border-bottom-width: 1px;
+	border-left-width: 5px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: dotted;
+	border-top-color: #111111;
+	border-right-color: #111111;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	line-height: 20px;
+}
+.pn-normal A:link {
+COLOR: #000000;
+FONT-SIZE: 11px;
+FONT-FAMILY: Tahoma, Verdana, sans-serif;
+TEXT-DECORATION: underline;
+background-color : transparent; 
+}
+.pn-normal A:visited {
+COLOR: #000000;
+FONT-SIZE: 11px;
+FONT-FAMILY:  Tahoma, Verdana, sans-serif;
+TEXT-DECORATION: underline;
+background-color : transparent; 
+}
+.pn-normal A:hover {
+COLOR: #990000;
+FONT-SIZE: 11px;
+FONT-FAMILY: Tahoma, Verdana, sans-serif;
+background-color : transparent; 
+}
+.pn-normal A:active {
+COLOR: #990000;
+FONT-SIZE: 11px;
+FONT-FAMILY: Tahoma, Verdana, sans-serif;
+TEXT-DECORATION: none;
+background-color : transparent; 
+}
+
+-->
+</style>
+<link href="../rf_amplifiers.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="5" cellspacing="0">
+    <tr><td width="80%" valign="top">
+  	<h2>Engineering Notes</h2>
+  	<h1 style="letter-spacing: 0.3em; ">POWER RF AMPLIFIERS TECHNICAL REFERENCE MATERIAL</h1><br>
+	<hr>
+    
+<font color="#990000">
+<h1>Noise Figure &amp; Level</h1>
+</font><hr>
+<b>Noise figure</b> is defined as:
+<p>NF = ((Si/Ni) Signal To Noise At Input (Source)) / ((So/No) Signal To Noise At Output)
+<pre><font face="Arial">
+<b>Background</b>
+
+N = Noise Power = kTB
+Where K = Boltzman's Constant = 1.38 *10<sup>-23</sup> Joules/Kelvin
+      T = Absolute Temperature, K(0°C = 273K)
+      B = 3 dB Noise Bandwidth, Hz
+</font></pre>
+<p><b>Example:</b> What is the noise level, in dBm, of a resistor (black body) at 17°C (room temperature) 
+over a 1 MHz bandwidth?
+<br>N = kTB = (1.38 *10<sup>-23</sup>) * (273 + 17) * (1 *10<sup>6</sup>) 
+= 1.37 *10<sup>-17</sup> *290 = 4.0 *10<sup>-15</sup> Joules/Second 
+<br>Or = 4  *10<sup>-15</sup> Joules/Second = 4  *10<sup>-15</sup> Watts
+<p><b>In dBm</b> 1 *10<sup>-15</sup> Watts = 1 *10<sup>-12</sup> mW = -120 dBm<br>
+Power Ratio of 4 = +6 dB<br>
+Noise level = -120 dBm + 6 dB = -114 dBm 
+  (Plot A on nomograph) 
+<p><b>Note:</b> NF of transistors are 2 dB to 30 dB due to bias currents, materials, etc.
+<p><b>Noise Level</b> in dBm at the input of an amplifier assuming NF = 10 dB is - 104 dBm (Plot B):
+<p><b>Noise Level</b> at the output, assuming the gain of the amplifier is 50 dB is:
+<p>No = KTB + NF + Gain = -114 dBm + 10 dB + 50 dB = -54 dBm 
+<p><b>Example:</b> If you add the gain of the amplifier to its NF (e.g., 50 dB + 10 dB = 60 dB), 
+plot C indicates -54 dBm output noise level.
+
+<font color="#990000"><h1>Noise Figure Momograph</h1></font>
+<p><img src="images/noise_figure.gif" alt="rf amplifiers noise figure monograph" width="299" height="419" border="1">
+  
+
+	<p align=center>
+	<a href="http://www.empowerrf.com" title="RF and Microwave Amplifiers">
+		<font color="#666666"><b>NEED A SPECIFIC AMPLIFIER? VISIT EmpowerRF.com</b></font></a></p>
+		<!-- &nbsp; : : &nbsp;
+	<a href="http://www.rf-components.net" target="_blank" title="RF Parts and Components">
+		<font color="#666666"><b>FOR RF COMPONENTS VISIT RF-components.net</b></font></a> -->
+     </td>
+    <td width="20%" class="panel-border" valign="top" align="right">
+	<span class="pn-normal">
+          <a href="index.php"><h3 style="text-decoration:none">EN Home</h3></a><br>
+          <a href="index.php?topic=MeasuringP1dB"><b>Using CCDF as a Method <br>of Measuring P1dB and P3dB</b></a><br><br>
+          <a href="index.php?topic=glossary"><b>RF Glossary of Terms</b></a><br><br>
+          <a href="index.php?topic=rf_power"><b>Watts to dBm and dBm to Watts<br> Conversion Calculator</b></a><br><br>
+          
+
+          <a href="index.php?topic=gain">RF Amplifiers Gain</a><br>
+          <a href="index.php?topic=passband_fr">Passband Frequency Range Gain Flatness</a><br>
+          <a href="index.php?topic=rf_power">RF Power</a><br>
+          <a href="index.php?topic=pulsed_power">Pulsed Power</a><br>
+          <a href="index.php?topic=peak_power">Peak Envelope Power</a><br>
+          <a href="index.php?topic=harmonics">Harmonics &amp; Spurious</a><br>
+          <a href="index.php?topic=intercept">Intercept Point</a><br>
+          <a href="index.php?topic=intermod">Intermodulation Distortion</a><br>
+          <a href="index.php?topic=multitone">Multitone IMD Monograph</a><br>
+          <a href="index.php?topic=noise_figure">Noise Figure &amp; Level</a><br>
+          <a href="index.php?topic=mod_type">Modulation Types</a><br>
+          <a href="index.php?topic=impedance">VSWR &amp; Return Loss (Impedance)</a><br>
+          <a href="index.php?topic=load_protection">Load VSWR &amp; Protection</a><br>
+          <a href="index.php?topic=leveling">Leveling Loops, Input Overdrive Protection</a><br>
+          <a href="index.php?topic=degradation">Graceful Degradation</a><br>
+          <a href="index.php?topic=protection">Protection Circuits</a><br>
+          <a href="index.php?topic=dc_input">DC Input Power &amp; Efficiency</a><br>
+          <a href="index.php?topic=cooling">Cooling Methods</a><br>
+          <a href="index.php?topic=classAMP">Class of RF Amplifiers</a><br>
+          <a href="index.php?topic=classA">Class A Operation</a><br>
+		  <a href="index.php?topic=classAB">Class AB Operation</a><br>
+          <a href="index.php?topic=classC">Class C operation</a><br>
+        </span></td>
+    </tr>
+  </table>
+  
+<!--ZOOMSTOP-->
+<!--calculate page lenth
+<input name="page_buttom" type="hidden">-->
+</td>
+</tr>
+<tr>
+    <td valign="top" background="https://www.empowerrf.com/images/main/rf_bg.gif" style="width: 140px;"><br>
+	  <p><font size="2">
+  	    &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com" title="RF Amplifiers"><b>Home Page</b></a><br>
+	    &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/company/amplifier-manufacturer.php" title="Brief resume on our company and our values">About Empower</a><br>
+        <!-- &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/company/rf-power-amplifier.php" title="Our skill set and product range">What We Do</a><br>-->
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/markets/" title="The markets we serve">Markets Served</a><br>
+      </font></p>
+      <p><font size="2">
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/company/contact_us.php" title="Contact details and request form">Contact Us</a><br>
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/company/custservice.php" title="Track your order, warranty repair request">Customer Service</a><br>
+	    &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/company/salesreps.php" title="Sales representative map and contact details">Sales Reps</a><br>
+	    &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/company/intsalesreps.php" title="Worldwide Sales representatives">International Sales</a><br>
+      </font></p>
+      <p><font size="2">
+	    &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/matrix/options.php" title="Options such as Touch Screen Control">Amplifier Options</a><br>
+        &nbsp;&nbsp;&nbsp;<img src="http://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/amplifier-notes/" title="RF Application Notes">Application Notes</a><br>
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/new_products/" title="Our latest product alerts">New Products</a><br>
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.rf-amplifiers.com" title="Helpful reference notes explaining technical terms">Engineering Notes</a><br>
+	  </font></p>
+      <p><font size="2">
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/press/tradeshow.php" title="Trade show schedule">Trade Shows</a><br>
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/press/" title="Press Releases">Media Presence</a><br>
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/news/" title="Company News">Company News</a><br>
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.empowerrf.com/company/jobopps.php" title="Open positions at our growing company">Job Opportunities</a><br>
+	  </font></p>
+      <p><font size="2">
+        &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> <a href="http://www.rf-amplifiers.com/partners.php" title="Visit our partners websites">Useful Links</a><br>
+
+	    &nbsp;&nbsp;&nbsp;<img src="https://www.empowerrf.com/images/bulet.gif" width="10" height="8"> 
+		<a href="https://www.empowerrf.com/team/" title="For Empower RF personnel only">Partner Login</a>		<br>
+	  </font></p>
+      
+      
+      <p align="center">
+	  <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+      <script type=IN/FollowCompany data-counter="none" data-id="358752"></script>
+      </p><br>
+      
+      
+      <!--
+      <p align="center"><a href="http://www.empowerrf.com/search/">
+        <img src="http://www.empowerrf.com/images/main/search.gif" width="140" height="27" border="0" align="absmiddle"></a></p>
+      -->
+      <!--      
+      <p align="center"><a href="http://www.empowerrf.com/press/tradeshow.php">
+        <img src="https://www.empowerrf.com/images/trshow/AOC2013-sm.jpg" alt="50th Annual AOC International Symposium" width="80" height="60" border="0"></a><br>
+      <font size="-2">Washington, DC<br>October 27-30</font></p>
+      -->
+      
+	  <p align="center"><a href="http://www.empowerrf.com/ident/catalog_request.php">
+        <img src="https://www.empowerrf.com/images/Amplifier-Catalog.jpg" alt="RF-Microwave Amplifiers Catalog Request" width="140" height="126" border="0"></a><br>
+      <font size="-2">Empower Catalog</font></p><br>
+      
+	  <p align="center"><a href="http://www.empowerrf.com/company/ISO.php" title="Empower RF is an ISO certified company">
+        <img src="https://www.empowerrf.com/images/ISO/iso.gif" alt="ISO Certified" width="80" height="107" border="0"></a></p>
+        
+  </td>
+</tr>
+<tr>
+<td height="25" class="ButtomBrd" style="width: 140px;"><img src="https://www.empowerrf.com/images/main/microwave2.jpg" width="140" height="25" border="0"></td>
+<td height="25" background="https://www.empowerrf.com/images/main/spacer.gif" class="ButtomBrd"><img src="https://www.empowerrf.com/images/main/trademark.gif" width="850" height="25" border="0"></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+<!-- Google Analitics -->
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-768648-1";
+urchinTracker();
+</script>
+<!-- Google Analitics -->
+</body>
+</html>
+
