@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html class="js" dir="ltr" version="XHTML+RDFa 1.0" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/1999/xhtml/vocab">      <style type="text/css" media="screen">        .containerobj {          height:15em;          overflow-x:auto;          overflow-y:hidden;          white-space:nowrap;          position:relative;        }        .containerobj div {          height:100%;          overflow-y:scroll;          overflow-x:hidden;          position:absolute;        }        .containerobj a {          display:block;          white-space:nowrap;          clear:both;          padding-right:15px;          overflow:hidden;          text-decoration:none;        }        .containerobj a:focus {          outline:none;        }        .containerobj a canvas {        }        .containerobj .feature {          min-width:200px;          overflow-y:auto;        }        .containerobj .feature a {          white-space:normal;        }        .containerobj .hasChildMenu {        }        .containerobj .active {          background-color:#3671cf;          color:#000;        }        .containerobj .inpath {          background:#d0d0d0;          color:#000;        }        .containerobj .hasChildMenu .widget {          color:#aaa;          position:absolute;          right:0;          text-decoration:none;          font-size:0.7em;        }      </style>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="https://community.ja.net/sites/all/themes/janetbootstrap/favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=0.75, user-scalable=yes">
+<link rel="next" href="/library/advisory-services/wimax-briefing">
+<meta content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" name="SKYPE_TOOLBAR">
+<link rel="up" href="/library/advisory-services/guides">
+<meta name="Generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="/library/advisory-services/overlapping-channel-problem">
+<link rel="shortlink" href="/library/advisory-services/overlapping-channel-problem">
+<link rel="prev" href="/library/advisory-services/care-and-feeding-ssids">
+  <title>Overview of IEEE 802.11u</title>
+  <link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_791YXBaKKm1ORM_7huSKEsIV9tSWq6wmRkERhuXpN6w.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_NXti8f1KG_3PtT4IIc0U3jDor0MbcpVCy5HvGkHBurk.css" media="screen">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_vS-cCpxbQBa3uW2c51VdufknhCfS-CYKUZapp8Y4XN4.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_I1RUnIh6ZgED_EI5I_ispm2YJAJlv7uzcInGCAmN0QA.css" media="all">
+<style type="text/css" media="all">.hidden{display:none;visibility:hidden}.visible-tinyphone{display:none!important}.visible-phone{display:none!important}.visible-tinymobile{display:none!important}.visible-mobile{display:none!important}.visible-tablet{display:none!important}.visible-wide-desktop{display:none!important}.visible-desktop{}// Don't set initially
+
+.hidden-tinyphone {}.hidden-tinymobile{}.hidden-phone{}.hidden-mobile{}.hidden-tablet{}.hidden-desktop{display:none!important}@media (max-width:479px){.visible-tinyphone{display:inherit!important}.hidden-tinyphone{display:none!important}.hidden-phone{display:inherit!important}.visible-phone{display:none!important}.hidden-tinyphone.visible-phone{display:none!important}.visible-tinymobile{display:inherit!important}.hidden-tinymobile{display:none!important}.hidden-mobile{display:inherit!important}.visible-mobile{display:none!important}}@media (max-width:739px){.visible-phone{display:inherit!important}.visible-mobile{display:inherit!important}.hidden-phone{display:none!important}.hidden-mobile{display:none!important}.hidden-desktop{display:inherit!important}.visible-desktop{display:none!important}}@media (min-width:740px) and (max-width:979px){.visible-tablet{display:inherit!important}.hidden-tablet{display:none!important}.hidden-desktop{display:inherit!important}.visible-desktop{display:none!important}}@media (min-width:980px) and (max-width:1220px){.visible-normal-desktop{display:inherit!important}.hidden-normal-desktop{display:none!important}.hidden-wide-desktop{display:inherit!important}.visible-wide-desktop{display:none!important}}@media (min-width:1220px){.visible-wide-desktop{display:inherit!important}.hidden-wide-desktop{display:none!important}.hidden-normal-desktop{display:inherit!important}.visible-normal-desktop{display:none!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_Snk-0CJz4Rrru9RLJiAQwZrsR99nktOvnB3j0_kS3CE.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_wBgZzGb-vz6NM56-LkFzXlxj0CVKTXLjoDR6bOt8EJE.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_6j_kM_lFBpjKiiMCcWiOeu7BL5nIp-9slDeauzjyeCM.css" media="all">
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_PIQ-IeaHencY8G3mxby-6-hidN4eLbND61vj95sATXY.css" media="all" />
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_t4dtj-UgGzWq2RVm2LpvLuMkTy-dyAkeEWKkI7SrrkQ.css" media="all">
+<!--<![endif]-->
+  <script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.1"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/drupal.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/tipsy/javascripts/jquery.tipsy.js?v=0.1.7"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/tipsy/javascripts/tipsy.js?v=0.1.7"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/libraries/prettify/prettify.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/ajax.js?v=7.26"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/admin_menu/admin_devel/admin_devel.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/sitewide_notifications/js/sitewide_notifications.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_custom/js/janet_custom.js?n1k8ac"></script>
+<script type="text/javascript" src="/misc/jquery.once.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/lightbox2/js/auto_image_handling.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/lightbox2/js/lightbox.js?1393947801"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/panels/js/panels.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/prettify/prettify.loader.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/sitewide_notifications/js/jquery.hoverIntent.minified.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/user_relationships/user_relationships_ui/user_relationships_ui.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/views_slideshow/js/views_slideshow.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/jquery.tooltipster.min.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/rate_toggle/templates/rate-bookmark/rate-bookmark.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/heartbeat/js/autoresize.jquery.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/heartbeat/modules/heartbeat_comments/heartbeat_comments.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_adaptive_library/js/jquery.columnview.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_adaptive_library/js/janet_adaptive_library.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_topbar/js/janet_topbar.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/progress.js?v=7.26"></script>
+<script type="text/javascript">//<![CDATA[
+window.CKEDITOR_BASEPATH='/sites/all/libraries/ckeditor/'
+//]]></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/janetbootstrap.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-alert.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-carousel.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-collapse.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-dropdown.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-modal.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-tooltip.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-popover.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-transition.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-datepicker.js?n1k8ac"></script>
+<script type="text/javascript">//<![CDATA[
+jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"janetbootstrap","theme_token":"HFTBFTDZcg6zt8RB3ifEfygqHgt4_DmyK_wphpWqTlE","js":{"0":1,"sites\/all\/modules\/patched\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/tipsy\/javascripts\/jquery.tipsy.js":1,"sites\/all\/modules\/contrib\/tipsy\/javascripts\/tipsy.js":1,"sites\/all\/libraries\/prettify\/prettify.js":1,"sites\/all\/modules\/patched\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/patched\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/custom\/sitewide_notifications\/js\/sitewide_notifications.js":1,"sites\/all\/modules\/custom\/janet_custom\/js\/janet_custom.js":1,"\/misc\/jquery.once.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/auto_image_handling.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/contrib\/panels\/js\/panels.js":1,"sites\/all\/modules\/contrib\/prettify\/prettify.loader.js":1,"sites\/all\/modules\/custom\/sitewide_notifications\/js\/jquery.hoverIntent.minified.js":1,"sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/user_relationships_ui.js":1,"sites\/all\/modules\/contrib\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/themes\/janetbootstrap\/js\/jquery.tooltipster.min.js":1,"sites\/all\/modules\/contrib\/rate\/rate.js":1,"sites\/all\/modules\/contrib\/heartbeat\/js\/autoresize.jquery.js":1,"sites\/all\/modules\/contrib\/heartbeat\/modules\/heartbeat_comments\/heartbeat_comments.js":1,"sites\/all\/modules\/custom\/janet_adaptive_library\/js\/jquery.columnview.js":1,"sites\/all\/modules\/custom\/janet_adaptive_library\/js\/janet_adaptive_library.js":1,"sites\/all\/modules\/custom\/janet_topbar\/js\/janet_topbar.js":1,"misc\/progress.js":1,"1":1,"sites\/all\/themes\/janetbootstrap\/js\/janetbootstrap.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-alert.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-carousel.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-collapse.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-dropdown.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-modal.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-tooltip.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-popover.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-transition.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-datepicker.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/tipsy\/stylesheets\/tipsy.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/custom\/janet_app_centre\/css\/janet_app_centre.css":1,"sites\/all\/modules\/custom\/janet_custom_user\/css\/janet_custom_user.css":1,"sites\/all\/modules\/custom\/janet_topbar\/css\/janet_topbar.css":1,"sites\/all\/modules\/custom\/jcs_ui\/modules\/jcs_ui_pager\/css\/jcs_ui_pager.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/jcs_ui\/css\/jcs_ui.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/geshifilter\/geshifilter.css":1,"sites\/all\/modules\/custom\/iwf\/css\/iwf.css":1,"sites\/all\/modules\/contrib\/lexicon\/css\/lexicon.css":1,"sites\/all\/modules\/contrib\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/rate\/rate.css":1,"sites\/all\/modules\/patched\/shib_auth\/shib_auth.css":1,"sites\/all\/modules\/contrib\/tagadelic\/tagadelic.css":1,"sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/user_relationships_ui.css":1,"sites\/all\/modules\/contrib\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/custom\/janet_rate_up_down\/templates\/janet-up-down\/janet-up-down.css":1,"sites\/all\/modules\/custom\/janet_adaptive_library\/css\/janet_adaptive_library.css":1,"0":1,"sites\/all\/themes\/janetbootstrap\/css\/overrides\/ds_2col.css":1,"sites\/all\/themes\/janetbootstrap\/css\/overrides\/heartbeat.css":1,"sites\/all\/themes\/janetbootstrap\/css\/overrides\/heartbeat_2col.css":1,"sites\/all\/themes\/janetbootstrap\/tooltipster.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/janetbootstrap\/css\/all.css.less":1,"sites\/all\/themes\/janetbootstrap\/css\/responsive.css.less":1,"sites\/all\/libraries\/prettify\/prettify.css":1,"ie::normal::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default.css.less":1,"ie::normal::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"normal::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default.css.less":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"wide::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default.css.less":1,"wide::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default-wide.css.less":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/wide\/alpha-default-wide-12.css":1}},"heartbeat_language":"en","heartbeat_poll_url":"https:\/\/community.ja.net\/heartbeat\/js\/poll","lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)private:\/","default_image":"\/sites\/all\/modules\/contrib\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"(\\.thumbnail)","trigger_lightbox_classes":"img.inline,img.image-img_assist_custom,img.thumbnail, img.image-thumbnail","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":"lightbox_ungrouped","custom_trigger_classes":"img.caption","disable_for_gallery_lists":1,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":0},"prettify":{"linenums":false,"match":".content .node-wiki, .content .node-book","nocode":"no-code","custom":[],"markup":{"code":true,"pre":true,"precode":false}},"user_relationships_ui":{"loadingimage":"\/sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/images\/loadingAnimation.gif","savingimage":"\/sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/images\/savingimage.gif","position":{"position":"absolute","left":"0","top":"0"}},"tipsy":{"custom_selectors":[{"selector":".tipsy","options":{"fade":1,"gravity":"w","trigger":"hover","delayIn":"0","delayOut":"0","opacity":"0.8","offset":"0","html":0,"tooltip_content":{"source":"attribute","selector":"title"}}},{"selector":".tipsy-belowinf","options":{"fade":1,"gravity":"n","trigger":"hover","delayIn":"750","delayOut":"0","opacity":"0.98","offset":"0","html":0,"tooltip_content":{"source":"attribute","selector":"title"}}},{"selector":".tipsybadges","options":{"fade":1,"gravity":"n","trigger":"hover","delayIn":"750","delayOut":"0","opacity":"0.8","offset":"0","html":0,"tooltip_content":{"source":"attribute","selector":"title"}}}]},"heartbeat_comment_post_url":"https:\/\/community.ja.net\/heartbeat\/comment\/post","heartbeat_comment_load_url":"https:\/\/community.ja.net\/heartbeat\/comments\/load\/js","ajax":{"edit-il-button":{"wrapper":"janet-topbar-login-form","callback":"janet_topbar_login_form_callback","event":"mousedown","keypress":true,"prevent":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Institutional Login"}}},"janetTopbar":{"discofeedPath":"\/Shibboleth.sso\/DiscoFeed","loginPath":"\/Shibboleth.sso\/Login"}});
+//]]></script>
+
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-…vices context-overlapping-channel-problem lightbox-processed">
+
+
+<div class="grid-12 region region-content fl" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+                        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="ds-1col node node-book view-mode-full clearfix ">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2>Overview of IEEE 802.11u</h2></div></div></div><span class="print-link"></span><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><div class="two-col"><h1>Scott Armitage, Loughborough University March 2012</h1>
+<h2>Introduction</h2>
+<p>IEEE 802.11u is an amendment to the 802.11 family of protocols which enables the sending, and requesting, of information relating to a wireless network and its operator/owner.&nbsp; This allows users to be presented not just with the SSID of a wireless network but more detailed information, such as the services offered by the network.</p>
+<h2>Network Discovery and Selection</h2>
+<p>One of the key features of 802.11u is the ability to advertise pre-association information to clients.&nbsp; Access Points (AP) can send 802.11u information in the beacon frames for a wireless network.&nbsp; In the beacon frame the AP can describe the type of network offered from a predefined list;</p>
+<ul><li>Private Network</li>
+<li>Private Network with Guest Access</li>
+<li>Chargeable Public Network</li>
+<li>Free Public Network</li>
+<li>Personal Device Network</li>
+<li>Emergency Services Only Network</li>
+<li>Test or Experimental</li>
+<li>Wildcard</li>
+</ul><p>Additionally the AP can provide further, optional, venue information and a Homogenous ESSID (HESSID).&nbsp; The HESSID is a MAC address which is the same on all APs belonging to a network.&nbsp; The venue information in the beacon consists of a venue group and a venue type.&nbsp; The venue groups are defined as;</p>
+<ul><li>Unspecified</li>
+<li>Assembly</li>
+<li>Business</li>
+<li>Educational</li>
+<li>Factory and Industrial</li>
+<li>Institutional</li>
+<li>Mercantile</li>
+<li>Residential</li>
+<li>Storage</li>
+<li>Utility and Misc</li>
+<li>Vehicular</li>
+<li>Outdoor</li>
+</ul><p>The list of venue types is very large and varies depending upon the venue group selected.&nbsp; For the Educational venue group this list currently contains:</p>
+<ul><li>Unspecified Educational</li>
+<li>School, Primary</li>
+<li>School, Secondary</li>
+<li>University or College</li>
+</ul><p>Another optional part of the beacon is the support of advertisement protocols.&nbsp; The beacon can indicate which 802.11u advertisement protocols are supported by the AP.&nbsp; The current list of advertisement protocols contains:</p>
+<ul><li>Access Network Query Protocol (ANQP)</li>
+<li>MIH Information Service</li>
+<li>MIH Command and Event Services Capability Discovery (IEEE 802.21)</li>
+<li>Emergency Alert System (EAS)</li>
+<li>Vendor Specific</li>
+</ul><p>In the beacon frame it is also possible to advertise Roaming Consortium information.&nbsp; This part of the beacon frame uses ANQP elements to describe one or more roaming consortiums or service providers which the wireless network is part of.&nbsp; In an education setting this could be used to identify that an AP is part of eduroam.</p>
+<p>Finally as part of the beacon, an Emergency Alert Identifier can be sent out.&nbsp; This provides information which can be used by a client in the verification of an Emergency Alert System (EAS) message.</p>
+<h3>Generic Advertisement Service (GAS)</h3>
+<p>GAS provides the layer 2 transport for delivering 802.11u information.&nbsp; GAS is used as a container for ANQP elements sent between clients and APs.</p>
+<h3>ANQP</h3>
+<p>A key element of the network discovery and selection is the Access Network Query Protocol (ANQP).&nbsp; ANQP elements describe the service being offered by an access point.&nbsp;&nbsp; Clients can query an AP and receive lists of ANQP elements describing the service being offered by the access point and its capabilities.&nbsp; The list of current ANQP elements is:</p>
+<ul><li>ANQP Query list</li>
+</ul><p>The returned list of elements to an ANQP query</p>
+<ul><li>ANQP Capability list</li>
+</ul><p>A list of capabilities configured on the client which is provided on request</p>
+<ul><li>Venue Name information</li>
+</ul><p>This element contains a list of venues associated with the network.The venue name element can contain multiple names.Typically in an education setting, this would be the name of the institution and possibly the name of the campus or building.</p>
+<ul><li>Emergency Call Number information</li>
+</ul><p>This element contains a list of emergency contact numbers.</p>
+<ul><li>Network Authentication Type information</li>
+</ul><p>This element provides a list of authentication types.The current values for the authentication types are:</p>
+<ul><li>Acceptance of terms and conditions</li>
+<li>On-line enrollment supported</li>
+<li>http/https redirection</li>
+<li>DNS redirection</li>
+</ul><p>This is aimed primarily at captive portal based authentication systems.</p>
+<ul><li>Roaming Consortium list</li>
+</ul><p>The roaming consortium element list provides information about whether the network has membership to a roaming consortium or which service providers are supported by this network.Individual consortia (or single service providers) are identified by Organization Identifiers (OI) which are unique hexadecimal strings.This element can contain multiple OIs indicating the support of numerous service providers/consortia.As previously mentioned in an education setting, roaming consortium elements could be used to signify membership of eduroam.</p>
+<ul><li>IP Address Type Availability information</li>
+</ul><p>This element provides information about the availability of IP addresses in use on the network.The return values are split into IPv6 and IPv4 addresses.For IPv6 the current values are:</p>
+<ul><li>Address type not available</li>
+<li>Address type available</li>
+<li>Availability of the address type not known</li>
+</ul><p>For IPv4 the current values are:</p>
+<ul><li>Address type not available</li>
+<li>Public IPv4 address available</li>
+<li>Port-restricted IPv4 address available</li>
+<li>Single NATed private IPv4 address available</li>
+<li>Double NATed private IPv4 address available</li>
+<li>Port-restricted IPv4 address available and Single NATed IPv4 address available</li>
+<li>Port-restricted IPv4 address available and Double NATed IPv4 address available</li>
+<li>Availability of the address type not known</li>
+</ul><ul><li>Network Access Identifier (NAI) Realm list</li>
+</ul><p>The NAI element provides a list of realms associated to service providers whose networks or services are accessible via the AP. Optionally included for each NAI realm is the EAP methods supported by this service provider.The current list of return parameters for EAP methods are:</p>
+<ul><li>Expanded EAP Method</li>
+<li>Non-EAP Inner Authentication Type
+<ul><li>PAP, CHAP, MSCHAP, or MSCHAPv2</li>
+</ul></li>
+<li>Inner Authentication EAP Method Type
+<ul><li>Values from IANA EAP Method Type Numbers</li>
+</ul></li>
+<li>Expanded Inner EAP Method</li>
+<li>Credential Type
+<ul><li>SIM, USIM, NFC Secure Element, Hardware Token, Soft Token, Certificate, Username/Password, none</li>
+</ul></li>
+<li>Tunneled EAP Method Credential Type
+<ul><li>SIM, USIM, NFC Secure Element, Hardware Token, Soft Token, Certificate, Username/Password, none</li>
+</ul></li>
+<li>Vendor Specific</li>
+</ul><p>In an education setting, it is unlikely sites will list every other eduroam site and their supported EAP types as this is highly impractical.&nbsp; Sites could however indicate the supported EAP types for their own realms.</p>
+<ul><li>3GPP Cellular Network information</li>
+</ul><ul><li>AP Geospatial Location</li>
+</ul><p>This element provides the APs location in LCI format.</p>
+<ul><li>AP Civic Location</li>
+</ul><p>This element provides the APs location in Civic format.</p>
+<ul><li>AP Location Public Identifier URI</li>
+</ul><p>This element provides a URI reference where location information about the AP can be retrieved.</p>
+<ul><li>Domain Name list</li>
+</ul><p>This element contains a list of the domain names belonging to the AP owner/operator.</p>
+<ul><li>Emergency Alert Identifier URI</li>
+</ul><p>This element contains a URI reference from which an emergency alert system (EAS) message can be retrieved.</p>
+<ul><li>Emergency NAI</li>
+</ul><p>This element contains a string which can be used by the client to indicate an emergency access request.</p>
+<ul><li>ANQP vendor-specific list</li>
+</ul><h2>Emergency Services</h2>
+<p>802.11u provides the ability for clients, in an emergency, to contact the emergency services.&nbsp; This can be through unauthenticated access or for authenticated users only.&nbsp; If an access point supports emergency access, this is indicated in the 802.11u information in the wireless beacon frames.&nbsp;</p>
+<p>802.11u also has the provision to create emergency services only networks, dedicated and limited to accessing emergency services only.&nbsp; These can provide location information in the 802.11u beacon to assist the emergency services in locating the client.</p>
+<h3>Emergency Alert System (EAS)</h3>
+<p>As well as providing access to contact the emergency services there is provision for alert messages to be sent to clients. The presence of an emergency message, which the client can query from the AP, can be sent in the beacon frames.&nbsp;</p>
+<h2>Summary</h2>
+<p>802.11u introduces a number of useful new features.&nbsp; Whilst many of the features are aimed at Subscription Service Provider Networks (SSPN) such as mobile phone networks and nationwide captive portal operators, many are also of benefit to the eduroam community.&nbsp;</p>
+</div>
+</div></div></div>  
+</div>    </div>
+  </div>
+</div>      </div>
+</div>
+
+
+</body>
+</html>    
