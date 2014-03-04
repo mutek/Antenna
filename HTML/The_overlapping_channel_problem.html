@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html class="js" dir="ltr" version="XHTML+RDFa 1.0" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/1999/xhtml/vocab">      <style type="text/css" media="screen">        .containerobj {          height:15em;          overflow-x:auto;          overflow-y:hidden;          white-space:nowrap;          position:relative;        }        .containerobj div {          height:100%;          overflow-y:scroll;          overflow-x:hidden;          position:absolute;        }        .containerobj a {          display:block;          white-space:nowrap;          clear:both;          padding-right:15px;          overflow:hidden;          text-decoration:none;        }        .containerobj a:focus {          outline:none;        }        .containerobj a canvas {        }        .containerobj .feature {          min-width:200px;          overflow-y:auto;        }        .containerobj .feature a {          white-space:normal;        }        .containerobj .hasChildMenu {        }        .containerobj .active {          background-color:#3671cf;          color:#000;        }        .containerobj .inpath {          background:#d0d0d0;          color:#000;        }        .containerobj .hasChildMenu .widget {          color:#aaa;          position:absolute;          right:0;          text-decoration:none;          font-size:0.7em;        }      </style>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="https://community.ja.net/sites/all/themes/janetbootstrap/favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=0.75, user-scalable=yes">
+<link rel="next" href="/library/advisory-services/wimax-briefing">
+<meta content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" name="SKYPE_TOOLBAR">
+<link rel="up" href="/library/advisory-services/guides">
+<meta name="Generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="/library/advisory-services/overlapping-channel-problem">
+<link rel="shortlink" href="/library/advisory-services/overlapping-channel-problem">
+<link rel="prev" href="/library/advisory-services/care-and-feeding-ssids">
+  <title>The overlapping channel problem | The Janet Community Website</title>
+  <link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_791YXBaKKm1ORM_7huSKEsIV9tSWq6wmRkERhuXpN6w.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_NXti8f1KG_3PtT4IIc0U3jDor0MbcpVCy5HvGkHBurk.css" media="screen">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_vS-cCpxbQBa3uW2c51VdufknhCfS-CYKUZapp8Y4XN4.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_I1RUnIh6ZgED_EI5I_ispm2YJAJlv7uzcInGCAmN0QA.css" media="all">
+<style type="text/css" media="all">.hidden{display:none;visibility:hidden}.visible-tinyphone{display:none!important}.visible-phone{display:none!important}.visible-tinymobile{display:none!important}.visible-mobile{display:none!important}.visible-tablet{display:none!important}.visible-wide-desktop{display:none!important}.visible-desktop{}// Don't set initially
+
+.hidden-tinyphone {}.hidden-tinymobile{}.hidden-phone{}.hidden-mobile{}.hidden-tablet{}.hidden-desktop{display:none!important}@media (max-width:479px){.visible-tinyphone{display:inherit!important}.hidden-tinyphone{display:none!important}.hidden-phone{display:inherit!important}.visible-phone{display:none!important}.hidden-tinyphone.visible-phone{display:none!important}.visible-tinymobile{display:inherit!important}.hidden-tinymobile{display:none!important}.hidden-mobile{display:inherit!important}.visible-mobile{display:none!important}}@media (max-width:739px){.visible-phone{display:inherit!important}.visible-mobile{display:inherit!important}.hidden-phone{display:none!important}.hidden-mobile{display:none!important}.hidden-desktop{display:inherit!important}.visible-desktop{display:none!important}}@media (min-width:740px) and (max-width:979px){.visible-tablet{display:inherit!important}.hidden-tablet{display:none!important}.hidden-desktop{display:inherit!important}.visible-desktop{display:none!important}}@media (min-width:980px) and (max-width:1220px){.visible-normal-desktop{display:inherit!important}.hidden-normal-desktop{display:none!important}.hidden-wide-desktop{display:inherit!important}.visible-wide-desktop{display:none!important}}@media (min-width:1220px){.visible-wide-desktop{display:inherit!important}.hidden-wide-desktop{display:none!important}.hidden-normal-desktop{display:inherit!important}.visible-normal-desktop{display:none!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_Snk-0CJz4Rrru9RLJiAQwZrsR99nktOvnB3j0_kS3CE.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_wBgZzGb-vz6NM56-LkFzXlxj0CVKTXLjoDR6bOt8EJE.css" media="all">
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_6j_kM_lFBpjKiiMCcWiOeu7BL5nIp-9slDeauzjyeCM.css" media="all">
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_PIQ-IeaHencY8G3mxby-6-hidN4eLbND61vj95sATXY.css" media="all" />
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<link type="text/css" rel="stylesheet" href="https://community.ja.net/sites/default/files/css/css_t4dtj-UgGzWq2RVm2LpvLuMkTy-dyAkeEWKkI7SrrkQ.css" media="all">
+<!--<![endif]-->
+  <script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.1"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/drupal.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/tipsy/javascripts/jquery.tipsy.js?v=0.1.7"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/tipsy/javascripts/tipsy.js?v=0.1.7"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/libraries/prettify/prettify.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/ajax.js?v=7.26"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/admin_menu/admin_devel/admin_devel.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/sitewide_notifications/js/sitewide_notifications.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_custom/js/janet_custom.js?n1k8ac"></script>
+<script type="text/javascript" src="/misc/jquery.once.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/lightbox2/js/auto_image_handling.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/lightbox2/js/lightbox.js?1393947801"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/panels/js/panels.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/prettify/prettify.loader.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/sitewide_notifications/js/jquery.hoverIntent.minified.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/patched/user_relationships/user_relationships_ui/user_relationships_ui.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/views_slideshow/js/views_slideshow.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/jquery.tooltipster.min.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/rate_toggle/templates/rate-bookmark/rate-bookmark.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/heartbeat/js/autoresize.jquery.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/contrib/heartbeat/modules/heartbeat_comments/heartbeat_comments.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_adaptive_library/js/jquery.columnview.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_adaptive_library/js/janet_adaptive_library.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/modules/custom/janet_topbar/js/janet_topbar.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/misc/progress.js?v=7.26"></script>
+<script type="text/javascript">//<![CDATA[
+window.CKEDITOR_BASEPATH='/sites/all/libraries/ckeditor/'
+//]]></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/janetbootstrap.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-alert.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-carousel.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-collapse.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-dropdown.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-modal.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-tooltip.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-popover.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-transition.js?n1k8ac"></script>
+<script type="text/javascript" src="https://community.ja.net/sites/all/themes/janetbootstrap/js/bootstrap-datepicker.js?n1k8ac"></script>
+<script type="text/javascript">//<![CDATA[
+jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"janetbootstrap","theme_token":"HFTBFTDZcg6zt8RB3ifEfygqHgt4_DmyK_wphpWqTlE","js":{"0":1,"sites\/all\/modules\/patched\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/tipsy\/javascripts\/jquery.tipsy.js":1,"sites\/all\/modules\/contrib\/tipsy\/javascripts\/tipsy.js":1,"sites\/all\/libraries\/prettify\/prettify.js":1,"sites\/all\/modules\/patched\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/patched\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/custom\/sitewide_notifications\/js\/sitewide_notifications.js":1,"sites\/all\/modules\/custom\/janet_custom\/js\/janet_custom.js":1,"\/misc\/jquery.once.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/auto_image_handling.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/contrib\/panels\/js\/panels.js":1,"sites\/all\/modules\/contrib\/prettify\/prettify.loader.js":1,"sites\/all\/modules\/custom\/sitewide_notifications\/js\/jquery.hoverIntent.minified.js":1,"sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/user_relationships_ui.js":1,"sites\/all\/modules\/contrib\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/themes\/janetbootstrap\/js\/jquery.tooltipster.min.js":1,"sites\/all\/modules\/contrib\/rate\/rate.js":1,"sites\/all\/modules\/contrib\/heartbeat\/js\/autoresize.jquery.js":1,"sites\/all\/modules\/contrib\/heartbeat\/modules\/heartbeat_comments\/heartbeat_comments.js":1,"sites\/all\/modules\/custom\/janet_adaptive_library\/js\/jquery.columnview.js":1,"sites\/all\/modules\/custom\/janet_adaptive_library\/js\/janet_adaptive_library.js":1,"sites\/all\/modules\/custom\/janet_topbar\/js\/janet_topbar.js":1,"misc\/progress.js":1,"1":1,"sites\/all\/themes\/janetbootstrap\/js\/janetbootstrap.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-alert.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-carousel.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-collapse.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-dropdown.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-modal.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-tooltip.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-popover.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-transition.js":1,"sites\/all\/themes\/janetbootstrap\/js\/bootstrap-datepicker.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/tipsy\/stylesheets\/tipsy.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/custom\/janet_app_centre\/css\/janet_app_centre.css":1,"sites\/all\/modules\/custom\/janet_custom_user\/css\/janet_custom_user.css":1,"sites\/all\/modules\/custom\/janet_topbar\/css\/janet_topbar.css":1,"sites\/all\/modules\/custom\/jcs_ui\/modules\/jcs_ui_pager\/css\/jcs_ui_pager.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/jcs_ui\/css\/jcs_ui.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/geshifilter\/geshifilter.css":1,"sites\/all\/modules\/custom\/iwf\/css\/iwf.css":1,"sites\/all\/modules\/contrib\/lexicon\/css\/lexicon.css":1,"sites\/all\/modules\/contrib\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/rate\/rate.css":1,"sites\/all\/modules\/patched\/shib_auth\/shib_auth.css":1,"sites\/all\/modules\/contrib\/tagadelic\/tagadelic.css":1,"sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/user_relationships_ui.css":1,"sites\/all\/modules\/contrib\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/custom\/janet_rate_up_down\/templates\/janet-up-down\/janet-up-down.css":1,"sites\/all\/modules\/custom\/janet_adaptive_library\/css\/janet_adaptive_library.css":1,"0":1,"sites\/all\/themes\/janetbootstrap\/css\/overrides\/ds_2col.css":1,"sites\/all\/themes\/janetbootstrap\/css\/overrides\/heartbeat.css":1,"sites\/all\/themes\/janetbootstrap\/css\/overrides\/heartbeat_2col.css":1,"sites\/all\/themes\/janetbootstrap\/tooltipster.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/janetbootstrap\/css\/all.css.less":1,"sites\/all\/themes\/janetbootstrap\/css\/responsive.css.less":1,"sites\/all\/libraries\/prettify\/prettify.css":1,"ie::normal::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default.css.less":1,"ie::normal::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"normal::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default.css.less":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"wide::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default.css.less":1,"wide::sites\/all\/themes\/janetbootstrap\/css\/janetbootstrap-alpha-default-wide.css.less":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/wide\/alpha-default-wide-12.css":1}},"heartbeat_language":"en","heartbeat_poll_url":"https:\/\/community.ja.net\/heartbeat\/js\/poll","lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)private:\/","default_image":"\/sites\/all\/modules\/contrib\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"(\\.thumbnail)","trigger_lightbox_classes":"img.inline,img.image-img_assist_custom,img.thumbnail, img.image-thumbnail","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":"lightbox_ungrouped","custom_trigger_classes":"img.caption","disable_for_gallery_lists":1,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":0},"prettify":{"linenums":false,"match":".content .node-wiki, .content .node-book","nocode":"no-code","custom":[],"markup":{"code":true,"pre":true,"precode":false}},"user_relationships_ui":{"loadingimage":"\/sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/images\/loadingAnimation.gif","savingimage":"\/sites\/all\/modules\/patched\/user_relationships\/user_relationships_ui\/images\/savingimage.gif","position":{"position":"absolute","left":"0","top":"0"}},"tipsy":{"custom_selectors":[{"selector":".tipsy","options":{"fade":1,"gravity":"w","trigger":"hover","delayIn":"0","delayOut":"0","opacity":"0.8","offset":"0","html":0,"tooltip_content":{"source":"attribute","selector":"title"}}},{"selector":".tipsy-belowinf","options":{"fade":1,"gravity":"n","trigger":"hover","delayIn":"750","delayOut":"0","opacity":"0.98","offset":"0","html":0,"tooltip_content":{"source":"attribute","selector":"title"}}},{"selector":".tipsybadges","options":{"fade":1,"gravity":"n","trigger":"hover","delayIn":"750","delayOut":"0","opacity":"0.8","offset":"0","html":0,"tooltip_content":{"source":"attribute","selector":"title"}}}]},"heartbeat_comment_post_url":"https:\/\/community.ja.net\/heartbeat\/comment\/post","heartbeat_comment_load_url":"https:\/\/community.ja.net\/heartbeat\/comments\/load\/js","ajax":{"edit-il-button":{"wrapper":"janet-topbar-login-form","callback":"janet_topbar_login_form_callback","event":"mousedown","keypress":true,"prevent":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Institutional Login"}}},"janetTopbar":{"discofeedPath":"\/Shibboleth.sso\/DiscoFeed","loginPath":"\/Shibboleth.sso\/Login"}});
+//]]></script>
+
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-…vices context-overlapping-channel-problem lightbox-processed">
+
+    
+<div class="grid-12 region region-content fl" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+                        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="ds-1col node node-book view-mode-full clearfix ">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><h2>The overlapping channel problem</h2></div></div></div><span class="print-link"></span><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><div class="two-col"><h3>What Overlapping Channel Problem?</h3>
+<p>In the UK, the area of the wireless spectrum set aside for the use of 802.11b/g wireless networking devices is the ISM (Industrial, Scientific and Medical) band between 2.400 GHz and 2.497 GHz. In the UK this is subdivided into 13 channels of 25 MHz. In the US, only the first 11 of these channels are available – a fact with implications for UK deployments (see ‘WAG’s Advice’ below).</p>
+<p>However, this description can give a misleading picture. Radio signals are not tightly confined to a single point in the spectrum but are distributed symmetrically around a ‘mid’ frequency. This will be familiar from the experience of tuning a radio, where the signal gradually gets stronger as you turn the dial before hitting the peak frequency and then slowly dies away again. In fact, the width of spectrum across which the signal is distributed is related to the bandwidth (in the networking sense) of the data being transmitted and the symbol rate used to encode it (this relationship is discussed in Nyquist/Shannon sampling theory). 802.11b, with a bandwidth of 11Mbit/s and a binary symbol system, requires 22MHz per channel (802.11g achieves its greater data rate in the same channel width by increasing the bits carried per symbol). So, a better picture of the channels in the 2.4 GHz spectrum is given by the following (the four differently shaded, solid curves indicate signals associated with the four non-overlapping channels: 1, 5, 9 and 13):</p>
+<table cellspacing="0" border="1" cellpadding="0"><tbody><tr><td valign="top" width="154">
+<p><strong>Channel </strong></p>
+</td>
+<td valign="top" width="154">
+<p><strong>Start Frequency </strong></p>
+</td>
+<td valign="top" width="154">
+<p><strong>Mid Frequency </strong></p>
+</td>
+<td valign="top" width="154">
+<p><strong>End Frequency</strong></p>
+</td>
+</tr><tr><td valign="top" width="154">
+<p>1</p>
+</td>
+<td valign="top" width="154">
+<p>2399.5 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2412 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2424.5 MHz</p>
+</td>
+</tr><tr><td valign="top" width="154">
+<p>5</p>
+</td>
+<td valign="top" width="154">
+<p>2419.5 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2432 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2444.5 MHz</p>
+</td>
+</tr><tr><td valign="top" width="154">
+<p>9</p>
+</td>
+<td valign="top" width="154">
+<p>2439.5 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2452 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2464.5 MHz</p>
+</td>
+</tr><tr><td valign="top" width="154">
+<p>13</p>
+</td>
+<td valign="top" width="154">
+<p>2459.5 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2472 MHz</p>
+</td>
+<td valign="top" width="154">
+<p>2484.5 MHz</p>
+</td>
+</tr></tbody></table><p>Significant overlap can be seen between adjacent bands. APs (access points) with physically overlapping broadcast cells configured to the same or near-adjacent channels will be trying to use substantially the same frequencies to transmit and receive data.</p>
+<p>Whilst a problem, overlap does not completely preclude wireless communications. The Media Access Control (MAC) specification for 802.11b networks implements a CSMA/CA (Carrier Sense Multiple Access Collision Avoidance) mechanism, which effectively means that each AP listens on its channel before attempting a transmission. In the overlap scenario described above, the multiple APs would end up sharing the available channel resource (with some further reduction in throughput due to collisions). WiFi was designed to support many interfering, overlapping networks, handling the resultant packet collisions with minimum fuss. So rather than entirely disrupting a wireless LAN, overlapping channel assignments ‘merely’ greatly reduce its efficiency. This is clearly not desirable, and so the standard advice in wireless networking circles in the UK is to select one of the four non-overlapping channels for adjacent cells, allowing all APs to operate at their peak throughput. However, this raises a new problem ...</p>
+<h3>The Four Colour Problem</h3>
+<p>The ‘Four Colour Problem’ is a mathematical curiosity dating back to 1852, when Francis Guthrie, trying to colour in a map of counties of england, noticed that four colours sufficed to ensure that adjacent regions (i.e. those sharing a common boundary segment, not just a point) received different colours. However, a rigorous mathematical proof for this conjecture was not forthcoming until that by Appel and Haken in 1976, itself controversial for its use of computers in proof. (K. Appel, W. Haken, and J. Koch, every planar map is four colorable. II. Reducibility. Illinois J. Math., 21(3):491-567, 1977.)</p>
+<p>It is not a great leap to substitute the pattern of adjacent cells of a wireless LAN in a building for the counties map, and the available frequency bands for the colourist’s paints. So, mathematics seems to be telling us that whatever the pattern of adjacent wireless cells on a plane surface, they can always be configured in a way that completely avoids channel interference, using only the four non-overlapping channels and avoiding adjacent cells using the same channel. (In fact, in typical situations, even three channels can be enough – fortunately for the Americans, who only have 11 channels in their corresponding ISM band and thus only three non-overlapping channels.)</p>
+<p>Unfortunately, we seldom deploy wireless on just a single floor of a building, and adding the third dimension into the problem makes it much harder to find a non-overlapping solution. In most buildings, wireless networking signals penetrate ceilings and floors as readily as they do walls (most omnidirectional antennae on APs are ¼ wave whips, which generate a flattened torus of signal distribution centred on their antenna; PCMICA client radios tend to emit in a spherical pattern), so our ‘colouring’ problem channel configuration design has to address cell boundaries both above and below as well as on the same level as the AP.</p>
+<p>Somehow we need to find more ‘colours’ for our palette.</p>
+<h3>A Solution?</h3>
+<p>An analysis by Mitch Burton (Mitch Burton, Channel overlap calculations for 802.11b Networks. TechOnline, November 2002. <a href="http://www.eetimes.com/electrical-engineers/education-training/tech-papers/4134127/Channel-Overlap-Calculations-for-802-11b-Networks" rel="nofollow">http://www.eetimes.com/electrical-engineers/education-training/tech-papers/4134127/Channel-Overlap-Calculations-for-802-11b-Networks</a>) reminds us that whilst using more closely spaced channels does result in interference, the actual loss in throughput is minimal if we select five widely spaced channels instead of the usual four (or four rather than three, in the States). According to Burton’s analysis, when two ‘buffer’ channels separate each of the 802.11b channels in use (i.e. channels 1, 4, 8, 11 and 13), any given AP will only experience about 4% more interference. In comparison, the normally-recommended three channel buffer (i.e. using 1, 5, 9, 13) results in &lt;1% interference between APs. Taking into account the fact that the current generation of wireless equipment also uses filters to further reduce the impact of interference issues, it seems safe to conclude that the overhead incurred through using five channels rather than four of the available thirteen is acceptable.</p>
+<h3>Another Solution?</h3>
+<p>Most enterprise-class APs offer the capacity to assign an appropriate channel automatically. This is typically determined during the boot process by a simple poll of each channel at a randomised interval, so that groups of APs booting together do not all select the same band. The channel assignment from these polling results is made by a very basic algorithm, picking either the channel farthest from all those already in use, or if all are used then picking at random.</p>
+<p>Some manufacturers also offer wireless management devices that control a group of APs and, among other functions, make channel and transmission power assignments taking into account the group as a whole. These systems can also monitor the spectrum and dynamically adjust the channel assignments in response to changes such as new interference sources or AP failures (e.g. by extending range to compensate as much as possible).</p>
+<h3>WAG’s Advice</h3>
+<p>Firstly, the Janet WAG (Wireless Access Group) would advise against using automatic channel assignment options, either at the AP level or as implemented by a wireless management device. For the former, the primitive algorithm is barely sufficient to avoid initial interference on booting, and is otherwise little better than a guess. Management devices make a better stab at designing a plan, but tend to be biased towards (a) US channel assignments and (b) using reduced output power to create a viable pattern. This results in a greater number of APs being required to cover an area than might be required with manually-assigned spectrum management. Most importantly, a manually-assigned deployment is understood by its operators, whilst automated systems encourage treating spectrum management as a ‘black box’. A known wireless environment facilitates planned upgrades, sensible monitoring strategies and reaction to new sources of interference. That said, the technology continues to evolve, and this area should be monitored as firmware upgrades become available in case a viable technological solution arises.</p>
+<p>Returning to manual assignment, in most WiFi deployments in the UK it is sufficient to adopt the convention of using the four non-overlapping channels (in fact, in many situations, three channels are enough to achieve a non-overlapping topology, so an even greater buffer between adjacent cells can be achieved). However, there are scenarios when even four channels are insufficient:</p>
+<ul><li>in higher density deployments</li>
+<li>across multiple floors of a building</li>
+<li>where external interference precludes the use of one or more of the ‘usual’ channels.</li>
+</ul><p>In these circumstances it may prove possible to use partially-overlapping channels at the price of only minimal overhead in terms of traffic collisions. The rule of thumb is to maximize the channel separation between cells as much as is practical, and to be aware that once the channel separation drops below around 25MHz (three channels-worth of buffer), you will start to experience degradation in performance. Unfortunately, wireless deployment is something of an arcane art, and each case must be evaluated on its merits and tested in situ to see whether the impact of the increased overlap is acceptable.</p>
+<p>You should also bear in mind that reducing the power output of your APs is another way to decrease the number of interfering cell boundaries, and that when all else fails the 5GHz spectrum used by the 802.11a standard is available, with an increased number of non-overlapping channels.</p>
+<p>In the situation where an additional AP is required within an existing deployment, the efficiency of the WLAN is best maintained by redesigning the entire channel assignment pattern for all APs in the area rather than taking the easier option of just optimising the band chosen for the AP being added in.</p>
+<p>The potential difficulties of managing channel assignment in wireless deployment also make it advisable for institutions to develop a formal spectrum management plan. This is designed to:</p>
+<ul><li>prevent rogue deployments occupying channels you need for future ‘official’ WiFi services</li>
+<li>develop relationships with neighbours who might also deploy wireless (alternatively, try to get your kit deployed first)</li>
+<li>check that unrelated technologies that also use the ISM band (security systems etc.) do not limit your future wireless networking options</li>
+<li>develop networking policies and monitoring regimes that let you police the radio environment on campus to guard your local spectrum resource.</li>
+</ul><p>Finally, as noted above, there are two more channels available for WiFi hardware in europe than in the USA. Given the dominance of the US market for this technology, it is perhaps unsurprising that there is some observed bias in hardware performance around this point of difference: we observe that some hardware exhibits interoperability problems on channels 12 and 13 that it does not display on the lower, common channels 1-11. Whilst these difficulties often derive from a ‘factory default’ assumption of US deployment that is readily corrected through configuration change or driver updates, it is worth noting the potential for increased support load from deployments making use of these channels where a common hardware platform is not provided (and as a point to test when assessing hardware for deployment).</p>
+</div>
+</div></div></div>  <div id="book-navigation-711" class="book-navigation">
+    
+        <div class="page-links clearfix">
+              <a href="/library/advisory-services/care-and-feeding-ssids" class="page-previous" title="Go to previous page">‹ The care and feeding of SSIDs</a>
+                    <a href="/library/advisory-services/guides" class="page-up" title="Go to parent page">up</a>
+                    <a href="/library/advisory-services/wimax-briefing" class="page-next" title="Go to next page">WiMAX briefing ›</a>
+          </div>
+    
+  </div>
+<div class="field field-name-field-libtags field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/library/tags/advisory">advisory</a></div><div class="field-item odd"><a href="/library/tags/wireless">wireless</a></div><div class="field-item even"><a href="/library/tags/overlapping-channels">overlapping channels</a></div></div></div><ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://community.ja.net/Shibboleth.sso/Login?target=https%3A%2F%2Fcommunity.ja.net%2F%3Fq%3Dshib_login%2Fnode%2F768">Log in</a> or <a href="/register">Register</a> to post a comment.</span></li></ul><div id="comments" class="comment-wrapper">
+      <div>
+            <h3 class="title">Comments</h3>
+          </div>
+  
+      <div id="comments-content">
+      <a id="comment-195"></a>
+<article class="comment clearfix">
+
+  <header class="comment-user-header solution-off">
+    <div class="user-info">
+      <div id="user-header-877" class="user-header-lite show_card"><div class="user-picture" rel="877"><script type="text/javascript" pagespeed_no_defer="">//<![CDATA[
+(function(){var d=window,e=document,f="documentElement",g="scrollTop",k="prototype",l="body",m="getAttribute",n="",p="1",q="data",r="img",s="load",t="number",u="on",v="onload",w="pagespeed_lazy_position",x="pagespeed_lazy_replaced_functions",y="pagespeed_lazy_src",z="position",A="relative",B="resize",C="scroll",D="src";d.pagespeed=d.pagespeed||{};var E=d.pagespeed,F=function(a){this.d=[];this.a=0;this.b=!1;this.o=a;this.e=null;this.i=0;this.j=200;this.c=!1};
+F[k].s=function(){var a=0;typeof d.pageYOffset==t?a=d.pageYOffset:e[l]&&e[l][g]?a=e[l][g]:e[f]&&e[f][g]&&(a=e[f][g]);var b=d.innerHeight||e[f].clientHeight||e[l].clientHeight;return{top:a,bottom:a+b,height:b}};F[k].n=function(a){var b=a[m](w);if(b)return parseInt(b,0);var b=a.offsetTop,c=a.offsetParent;c&&(b+=this.n(c));b=Math.max(b,0);a.setAttribute(w,b);return b};F[k].r=function(a){var b=this.n(a);return{top:b,bottom:b+a.offsetHeight}};
+F[k].q=function(a,b){if(a.currentStyle)return a.currentStyle[b];if(e.defaultView&&e.defaultView.getComputedStyle){var c=e.defaultView.getComputedStyle(a,null);if(c)return c.getPropertyValue(b)}return a.style&&a.style[b]?a.style[b]:n};F[k].p=function(a){if(!this.c&&(0==a.offsetHeight||0==a.offsetWidth))return!1;if(this.q(a,z)==A)return!0;var b=this.s(),c=a.getBoundingClientRect();c?(a=c.top-b.height,b=c.bottom):(c=this.r(a),a=c.top-b.bottom,b=c.bottom-b.top);return a<=this.a&&0<=b+this.a};
+F[k].m=function(a){this.l(a);var b=this;d.setTimeout(function(){var c=a[m](y);if(null!=c)if((b.b||b.p(a))&&-1!=a.src.indexOf(b.o)){var h=a.parentNode,G=a.nextSibling;h&&h.removeChild(a);a.getAttribute=a.k;a.removeAttribute(v);a.removeAttribute(y);a.removeAttribute(x);h&&h.insertBefore(a,G);a.src=c}else b.d.push(a)},0)};F[k].loadIfVisible=F[k].m;F[k].u=function(){this.b=!0;this.f()};F[k].loadAllImages=F[k].u;F[k].f=function(){var a=this.d,b=a.length;this.d=[];for(var c=0;c<b;++c)this.m(a[c])};
+F[k].h=function(a,b){return a.a?null!=a.a(b):null!=a[m](b)};F[k].v=function(){for(var a=e.getElementsByTagName(r),b=0;b<a.length;++b){var c=a[b];this.h(c,y)&&this.l(c)}};F[k].overrideAttributeFunctions=F[k].v;F[k].l=function(a){var b=this;this.h(a,x)||(a.k=a[m],a.getAttribute=function(a){a.toLowerCase()==D&&b.h(this,y)&&(a=y);return this.k(a)},a.setAttribute(x,p))};
+E.g=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,!1);else if(a.attachEvent)a.attachEvent(u+b,c);else{var h=a[u+b];a[u+b]=function(){c.call(this);h&&h.call(this)}}};E.t=function(a,b){var c=new F(b);E.lazyLoadImages=c;E.g(d,s,function(){c.c=!0;c.b=a;c.a=200;c.f()});0!=b.indexOf(q)&&((new Image).src=b);var h=function(){if(!(c.c&&a||c.e)){var b=c.j;(new Date).getTime()-c.i>c.j&&(b=0);c.e=d.setTimeout(function(){c.i=(new Date).getTime();c.f();c.e=null},b)}};E.g(d,C,h);E.g(d,B,h)};
+E.lazyLoadInit=E.t;})();
+
+pagespeed.lazyLoadInit(false, "/mod_pagespeed_static/1.JiBnMqyl6S.gif");
+
+//]]></script><img alt="" src="https://community.ja.net/sites/default/files/styles/user_picture_mini_22_20/public/default_profile_image.png?itok=pdt2KZnG" height="20" width="22"></div><div class="user-details"><div class="fullname" rel="877"><a href="/users/tony-wang">Tony Wang</a></div></div></div>          </div>
+    <div class="rate-widget-1 rate-widget clear-block rate-average rate-widget-janet_up_down rate-6ba5510c8adbf1f3d6e3012b0146c4d4 rate-processed" id="rate-comment-195-1-1">
+<div class="rate-janet-up-down-rating neutral">0</div>
+
+<a class="rate-button rate-janet-up-down-btn-up" id="rate-button-1" rel="nofollow" href="/library/advisory-services/overlapping-channel-problem?rate=kQPZdgm_ITQJ4qJh_KYEqfJWfElr4YKbEdX3tElng2Y" title="+1">+1</a>
+<a class="rate-button rate-janet-up-down-btn-down" id="rate-button-2" rel="nofollow" href="/library/advisory-services/overlapping-channel-problem?rate=OazuSgMfGhe4DJWVQHMM9Yoq-C6-t26T4rOVsrBAmPA" title="-1">-1</a></div>  </header>
+
+  <div class="comment-body">
+
+    <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Is it better if I used 1, 5, 9, and 11 instead of 1, 6, and 11?<br>
+When I looked at it these overlapped a bit.</p>
+</div></div></div>
+    
+  </div>
+
+  <div class="comment-submitted">
+    Submitted by <a href="/users/tony-wang" title="View user profile." class="username">Tony Wang</a> on Sat, 2012-08-04 21:21  </div>
+
+  </article>    </div>
+  
+  </div>
+</div>    </div>
+  </div>
+</div>      </div>
+</div>
+
+
+</body>
+</html>
