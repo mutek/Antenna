@@ -19,3 +19,4 @@ https://archive.org/details/folkscanomy_electronics
 Note:
 
 è presente il ramo gh-pages visibile con git checkout gh-pages, se vuoi tornare al master esegui in quel ramo git checkout maste
+
