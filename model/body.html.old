@@ -1,28 +1,5 @@
-<!DOCTYPE HTML>
-<html lang="it">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Linux Journal archivio abbonamento</title>
-<link rel="stylesheet" href="stylesheets/stileCanvas.css"/>	
-<link rel="stylesheet" href="stylesheets/pigmentazione.css"/>
-<script type="text/javascript" src="javascripts/main.js">
-</script>
-<script type="text/javascript" src="javascripts/jquery-1.9.1.min.js">
-</script>
-<script type="text/javascript" src="javascripts/creaCanvas.js">
-</script>	
-</head>
-<body>	
-<h1>Linux Journal <img src="http://mutek.github.io/LinuxJournal/images/valid_html5.png" alt="TEST HTML 5 SUPERATO"></h1>
-<div id="wrap">
-<ul id="rivista">
 <li><a href="http://mutek.github.io/LinuxJournal/PDF/dlj235.pdf"><img src="http://mutek.github.io/LinuxJournal/Covers/dlj235.pdf.png" style="max-width: 314px;" alt="LinuxJournal numero dlj235"></a><div><a href="http://mutek.github.io/LinuxJournal/MOBI/dlj235.mobi">MOBI</a>    |    <a href="http://mutek.github.io/LinuxJournal/EPUB/dlj235.epub">EPUB</a></div>dlj235</li>
 <li><a href="http://mutek.github.io/LinuxJournal/PDF/dlj234.pdf"><img src="http://mutek.github.io/LinuxJournal/Covers/dlj234.pdf.png" style="max-width: 314px;" alt="LinuxJournal numero dlj234"></a><div><a href="http://mutek.github.io/LinuxJournal/MOBI/dlj234.mobi">MOBI</a>    |    <a href="http://mutek.github.io/LinuxJournal/EPUB/dlj234.epub">EPUB</a></div>dlj234</li>
 <li><a href="http://mutek.github.io/LinuxJournal/PDF/dlj233.pdf"><img src="http://mutek.github.io/LinuxJournal/Covers/dlj233.pdf.png" style="max-width: 314px;" alt="LinuxJournal numero dlj233"></a><div><a href="http://mutek.github.io/LinuxJournal/MOBI/dlj233.mobi">MOBI</a>    |    <a href="http://mutek.github.io/LinuxJournal/EPUB/dlj233.epub">EPUB</a></div>dlj233</li>
 <li><a href="http://mutek.github.io/LinuxJournal/PDF/dlj232.pdf"><img src="http://mutek.github.io/LinuxJournal/Covers/dlj232.pdf.png" style="max-width: 314px;" alt="LinuxJournal numero dlj232"></a><div><a href="http://mutek.github.io/LinuxJournal/MOBI/dlj232.mobi">MOBI</a>    |    <a href="http://mutek.github.io/LinuxJournal/EPUB/dlj232.epub">EPUB</a></div>dlj232</li>
 <li><a href="http://mutek.github.io/LinuxJournal/PDF/dlj231.pdf"><img src="http://mutek.github.io/LinuxJournal/Covers/dlj231.pdf.png" style="max-width: 314px;" alt="LinuxJournal numero dlj231"></a><div><a href="http://mutek.github.io/LinuxJournal/MOBI/dlj231.mobi">MOBI</a>    |    <a href="http://mutek.github.io/LinuxJournal/EPUB/dlj231.epub">EPUB</a></div>dlj231</li>
-<li><a href="http://mutek.github.io/LinuxJournal/PDF/dlj230.pdf"><img src="http://mutek.github.io/LinuxJournal/Covers/dlj230.pdf.png" style="max-width: 314px;" alt="LinuxJournal numero dlj230"></a><div><a href="http://mutek.github.io/LinuxJournal/MOBI/dlj230.mobi">MOBI</a>    |    <a href="http://mutek.github.io/LinuxJournal/EPUB/dlj230.epub">EPUB</a></div>dlj230</li>
-</ul>		
-</div>
-</body>
-</html>
