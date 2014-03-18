@@ -35,5 +35,6 @@ git commit -a -m "$EPOCA_UNIX"
 
 echo "Invio i cambiamenti locali al deposito remoto..."
 git push origin master
+git push origin gh-pages
 #git push origin gh-pages
 echo "ok"
